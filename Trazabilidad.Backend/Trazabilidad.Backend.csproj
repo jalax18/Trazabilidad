@@ -174,10 +174,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GarumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MacclientesController.cs" />
+    <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MpeclientesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />
+    <Compile Include="Controllers\XadsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +259,31 @@
     <Content Include="Views\UserTypes\Details.cshtml" />
     <Content Include="Views\UserTypes\Edit.cshtml" />
     <Content Include="Views\UserTypes\Index.cshtml" />
+    <Content Include="Views\Macservers\Create.cshtml" />
+    <Content Include="Views\Macservers\Delete.cshtml" />
+    <Content Include="Views\Macservers\Details.cshtml" />
+    <Content Include="Views\Macservers\Edit.cshtml" />
+    <Content Include="Views\Macservers\Index.cshtml" />
+    <Content Include="Views\Macclientes\Create.cshtml" />
+    <Content Include="Views\Macclientes\Delete.cshtml" />
+    <Content Include="Views\Macclientes\Details.cshtml" />
+    <Content Include="Views\Macclientes\Edit.cshtml" />
+    <Content Include="Views\Macclientes\Index.cshtml" />
+    <Content Include="Views\Mpeclientes\Create.cshtml" />
+    <Content Include="Views\Mpeclientes\Delete.cshtml" />
+    <Content Include="Views\Mpeclientes\Details.cshtml" />
+    <Content Include="Views\Mpeclientes\Edit.cshtml" />
+    <Content Include="Views\Mpeclientes\Index.cshtml" />
+    <Content Include="Views\Xads\Create.cshtml" />
+    <Content Include="Views\Xads\Delete.cshtml" />
+    <Content Include="Views\Xads\Details.cshtml" />
+    <Content Include="Views\Xads\Edit.cshtml" />
+    <Content Include="Views\Xads\Index.cshtml" />
+    <Content Include="Views\Garums\Create.cshtml" />
+    <Content Include="Views\Garums\Delete.cshtml" />
+    <Content Include="Views\Garums\Details.cshtml" />
+    <Content Include="Views\Garums\Edit.cshtml" />
+    <Content Include="Views\Garums\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
