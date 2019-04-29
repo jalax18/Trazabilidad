@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trazabilidad DptoXAD 4GL", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -27,6 +27,13 @@
                     <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
                     <li>@Html.ActionLink("Tipo Usuario", "Index", "UserTypes")</li>
                     <li>@Html.ActionLink("Macserver", "Index", "Macservers")</li>
+                    <li>@Html.ActionLink("MacCliente", "Index", "Macclientes")</li>
+                    <li>@Html.ActionLink("MpeCliente", "Index", "Mpeclientes")</li>
+                    <li>@Html.ActionLink("Xad", "Index", "Xads")</li>
+                    <li>@Html.ActionLink("Garum", "Index", "Garums")</li>
+
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
