@@ -141,8 +141,8 @@
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
           //  mainViewModel.Token = token;
-            mainViewModel.Lands = new LandsViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
+        //    mainViewModel.Lands = new LandsViewModel();
+         //   await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;

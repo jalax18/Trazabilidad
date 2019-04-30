@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lands.Resources {
+namespace Trazabilidad.Resources {
     using System;
     using System.Reflection;
     
@@ -30,7 +30,7 @@ namespace Lands.Resources {
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Lands.Resources.Resource", typeof(Resource).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Trazabilidad.Resources.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

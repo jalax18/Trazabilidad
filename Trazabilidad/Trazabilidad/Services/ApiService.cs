@@ -9,7 +9,7 @@
     using Models;
     using Newtonsoft.Json;
     using Plugin.Connectivity;
-    using Domain;
+    //using Common.Models;
 
     public class ApiService
     {

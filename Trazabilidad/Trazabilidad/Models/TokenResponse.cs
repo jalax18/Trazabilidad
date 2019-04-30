@@ -1,4 +1,4 @@
-﻿namespace Lands.Models
+﻿namespace Trazabilidad.Models
 {
     using System;
     using Newtonsoft.Json;
