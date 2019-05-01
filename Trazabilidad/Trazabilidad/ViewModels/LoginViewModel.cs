@@ -60,8 +60,8 @@
             this.IsRemembered = true;
             this.IsEnabled = true;
 
-            this.Email = "jzuluaga55@hotmail.com";
-            this.Password = "123456";
+            this.Email = "jalax@4glsp.com";
+            this.Password = "Astrid_18";
         }
         #endregion
 
@@ -110,8 +110,8 @@
                 return;
             }
 
-            /* var token = await this.apiService.GetToken(
-                 "http://landsapi1.azurewebsites.net", 
+           /*  var token = await this.apiService.GetToken(
+                 "http://localhost:1812", 
                  this.Email, 
                  this.Password);
 
