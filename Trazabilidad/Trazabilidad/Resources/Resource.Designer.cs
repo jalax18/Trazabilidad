@@ -298,11 +298,50 @@ namespace Trazabilidad.Resources {
                 return ResourceManager.GetString("Translations", resourceCulture);
             }
         }
-        
-        public static string MyLanguages {
-            get {
+
+        public static string MyLanguages
+        {
+            get
+            {
                 return ResourceManager.GetString("MyLanguages", resourceCulture);
             }
+        }
+
+        public static string Macserver
+        {
+            get
+            {
+                return ResourceManager.GetString("Macserver", resourceCulture);
+            }
+        }
+            public static string Maccliente
+        {
+            get
+            {
+                return ResourceManager.GetString("Maccliente", resourceCulture);
+            }
+        }
+        public static string Mpecliente
+        {
+            get
+            {
+                return ResourceManager.GetString("Mpecliente", resourceCulture);
+            }
+        }
+        public static string Xad
+        {
+            get
+            {
+                return ResourceManager.GetString("Xad", resourceCulture);
+            }
+        }
+        public static string Garum
+        {
+            get
+            {
+                return ResourceManager.GetString("Garum", resourceCulture);
+            }
+
         }
     }
 }

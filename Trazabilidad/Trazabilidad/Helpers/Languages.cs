@@ -172,5 +172,26 @@
         {
             get { return Resource.MyLanguages; }
         }
+
+        public static string Macserver
+        {
+            get { return Resource.Macserver; }
+        }
+        public static string Maccliente
+        {
+            get { return Resource.Maccliente; }
+        }
+        public static string Mpecliente
+        {
+            get { return Resource.Mpecliente; }
+        }
+        public static string Xad
+        {
+            get { return Resource.Xad; }
+        }
+        public static string Garum
+        {
+            get { return Resource.Garum; }
+        }
     }
 }

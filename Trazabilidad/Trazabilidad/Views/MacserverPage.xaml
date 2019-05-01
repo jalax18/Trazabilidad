@@ -9,7 +9,7 @@
     x:Class="Trazabilidad.Views.MacserverPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     BackgroundColor="Silver"
-    Title="{i18n:Translate Countries}">
+    Title="{i18n:Translate Macserver}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <ffimageloadingsvg:SvgImageSourceConverter 
@@ -47,6 +47,7 @@
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="8*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout 
@@ -55,16 +56,34 @@
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
-                                            Text="{Binding MacserverId}"
+                                            Text="Version"
                                             TextColor="Black">
                                         </Label>
                                         <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Large" 
                                             Text="{Binding VerMacserver}"
                                             TextColor="Black">
                                         </Label>
                                     </StackLayout>
-                                    <Image 
+                                    <StackLayout 
                                         Grid.Column="1"
+                                        VerticalOptions="Center">
+                                        <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            Text="Fecha"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Large" 
+                                            Text="{Binding MacserverId}"
+                                            TextColor="Black">
+                                        </Label>
+                                    </StackLayout>
+                                    <Image 
+                                        Grid.Column="2"
                                         HorizontalOptions="End" 
                                         Source="ic_chevron_right">
                                     </Image>
