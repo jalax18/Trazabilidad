@@ -1,0 +1,88 @@
+﻿@model Trazabilidad.Common.Models.Station
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Station</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Garum.VerGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Garum.VerGarum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maccliente.VerMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maccliente.VerMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Macserver.VerMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Macserver.VerMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mpeccliente.VerMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mpeccliente.VerMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StationType.StationTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StationType.StationTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Xad.VerXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Xad.VerXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameStation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameStation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEstacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEstacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

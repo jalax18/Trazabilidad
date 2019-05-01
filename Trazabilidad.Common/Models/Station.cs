@@ -61,6 +61,15 @@ namespace Trazabilidad.Common.Models
 
         public virtual Garum Garum { get; set; }
 
+        public int StationTypeId { get; set; }
+
+        [JsonIgnore]
+
+        public virtual StationType StationType { get; set; }
+
+
+
+
         public DateTime FechaEstacion { get; set; }
 
 
