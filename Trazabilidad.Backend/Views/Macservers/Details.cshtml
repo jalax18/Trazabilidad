@@ -18,9 +18,17 @@
             @Html.DisplayFor(model => model.VerMacserver)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaMacserver)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MacserverId }, new { @class = "btn btn-warning" })|
-    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MacserverId }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

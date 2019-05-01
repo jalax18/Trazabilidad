@@ -78,7 +78,7 @@
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Large" 
-                                            Text="{Binding MacserverId}"
+                                            Text="{Binding FechaMacserver}"
                                             TextColor="Black">
                                         </Label>
                                     </StackLayout>

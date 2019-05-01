@@ -9,7 +9,9 @@ namespace Trazabilidad.Models
             public int MacserverId { get; set; }
 
             public string VerMacserver { get; set; }
-        
+
+            public DateTime FechaMacserver { get; set; }
+
 
     }
 }
