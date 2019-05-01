@@ -23,6 +23,8 @@ namespace Trazabilidad.Domain.Models
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.User> Users { get; set; }
 
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.UserType> UserTypes { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.StationType> StationTypes { get; set; }
     }
 
 }

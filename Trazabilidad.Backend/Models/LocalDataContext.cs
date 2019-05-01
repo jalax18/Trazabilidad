@@ -20,5 +20,7 @@ namespace Trazabilidad.Backend.Models
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Xad> Xads { get; set; }
 
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Garum> Garums { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.StationType> StationTypes { get; set; }
     }
 }

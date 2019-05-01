@@ -56,6 +56,7 @@
     <Compile Include="Models\Macserver.cs" />
     <Compile Include="Models\Mpecliente.cs" />
     <Compile Include="Models\Station.cs" />
+    <Compile Include="Models\StationType.cs" />
     <Compile Include="Models\Xad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\User.cs" />
