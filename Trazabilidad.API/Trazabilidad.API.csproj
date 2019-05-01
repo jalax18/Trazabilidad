@@ -217,6 +217,7 @@
     <Compile Include="Controllers\MacclientesController.cs" />
     <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
+    <Compile Include="Controllers\StationsController.cs" />
     <Compile Include="Controllers\StationTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />

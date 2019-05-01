@@ -215,4 +215,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\twitter_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\4GL_logo.png" />
+  </ItemGroup>
 </Project>

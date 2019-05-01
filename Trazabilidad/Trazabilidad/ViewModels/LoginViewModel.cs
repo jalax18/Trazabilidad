@@ -140,9 +140,11 @@
 
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
-          //  mainViewModel.Token = token;
-            mainViewModel.Macserver = new MacserverViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new MacserverPage());
+            //  mainViewModel.Token = token;
+//            mainViewModel.Macserver = new MacserverViewModel();
+  //          await Application.Current.MainPage.Navigation.PushAsync(new MacserverPage());
+            mainViewModel.Stations = new StationsViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new StationsPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;

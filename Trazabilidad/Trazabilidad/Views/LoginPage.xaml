@@ -12,7 +12,7 @@
             <StackLayout
                 Padding="5">
                 <Image
-                    Source="onu"
+                    Source=""
                     WidthRequest="200">
                 </Image>
                 <Grid

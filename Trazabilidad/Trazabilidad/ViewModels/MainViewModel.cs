@@ -5,7 +5,17 @@
 
     public class MainViewModel
     {
-     /*   #region Properties
+
+        #region Properties
+
+        public List<Station> StationList
+        {
+            get;
+            set;
+        }
+
+        #endregion
+        /*   #region Properties
         public List<Land> LandsList
         {
             get;
@@ -27,6 +37,11 @@
         }
 
         public MacserverViewModel Macserver
+        {
+            get;
+            set;
+        }
+        public StationsViewModel Stations
         {
             get;
             set;
