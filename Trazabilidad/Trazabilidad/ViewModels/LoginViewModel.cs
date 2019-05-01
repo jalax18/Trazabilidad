@@ -61,7 +61,7 @@
             this.IsEnabled = true;
 
             this.Email = "jalax@4glsp.com";
-            this.Password = "Astrid_18";
+            this.Password = "Astrid_1812";
         }
         #endregion
 
@@ -110,7 +110,7 @@
                 return;
             }
 
-           /*  var token = await this.apiService.GetToken(
+             var token = await this.apiService.GetToken(
                  "http://localhost:1812", 
                  this.Email, 
                  this.Password);
@@ -136,7 +136,7 @@
                      Languages.Accept);
                  this.Password = string.Empty;
                  return;
-             }*/
+             }
 
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
