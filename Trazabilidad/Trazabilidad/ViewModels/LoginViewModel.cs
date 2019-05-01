@@ -137,7 +137,9 @@
                  this.Password = string.Empty;
                  return;
              }
-
+            Settings.AccessToken = token.AccessToken;
+            Settings.TokenType = token.TokenType;
+            Settings.IsRemembered = this.IsRemembered;
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
             //  mainViewModel.Token = token;
