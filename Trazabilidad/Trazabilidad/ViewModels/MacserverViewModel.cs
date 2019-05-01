@@ -1,15 +1,18 @@
 ﻿namespace Trazabilidad.ViewModels
 {
+    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
+    using System.Net.Http;
+   // using System.Net.Http.Headers;
     using System.Windows.Input;
     using GalaSoft.MvvmLight.Command;
     using Helpers;
     using Models;
     using Services;
     using Xamarin.Forms;
-
+    
     public class MacserverViewModel : BaseViewModel
     {
         #region Services
@@ -17,22 +20,22 @@
         #endregion
 
         #region Attributes
-        private ObservableCollection<Land> lands;
-        private List<Land> landsList;
+        private ObservableCollection<Macserver> macservers;
+        private List<Macserver> macserversList;
         private bool isRefreshing;
         private string filter;
         #endregion
 
         #region Properties
-        public ObservableCollection<Land> Lands
+        public ObservableCollection<Macserver> Macservers
         {
-            get { return this.lands; }
-            set { SetValue(ref this.lands, value); }
+            get { return this.macservers; }
+            set { SetValue(ref this.macservers, value); }
         }
-        public List<Land> LandsList
+        public List<Macserver> MacserversList
         {
-            get { return this.landsList; }
-            set { SetValue(ref this.landsList, value); }
+            get { return this.macserversList; }
+            set { SetValue(ref this.macserversList, value); }
         }
 
         public bool IsRefreshing
@@ -56,12 +59,15 @@
         public MacserverViewModel()
         {
             this.apiService = new ApiService();
-            this.LoadLands();
+           // this.Test();
+            this.LoadMacservers();
         }
+
+       
         #endregion
 
         #region Methods
-        private async void LoadLands()
+        private async void LoadMacservers()
         {
             this.IsRefreshing = true;
             var connection = await this.apiService.CheckConnection();
@@ -77,10 +83,10 @@
                 return;
             }
 
-            var response = await this.apiService.GetList<Land>(
-                "http://restcountries.eu",
-                "/rest",
-                "/v2/all");
+            var response = await this.apiService.GetList<Macserver>(
+                "http://localhost:1812",
+                "/api",
+                "/macservers");
 
             if (!response.IsSuccess)
             {
@@ -93,8 +99,8 @@
                 return;
             }
 
-            var LandsList = (List<Land>)response.Result;
-            this.Lands = new ObservableCollection<Land>(this.LandsList);
+            this.MacserversList = (List<Macserver>)response.Result;
+            this.Macservers = new ObservableCollection<Macserver>(this.MacserversList);
             this.IsRefreshing = false;
         }
         #endregion
@@ -110,7 +116,7 @@
         {
             get
             {
-                return new RelayCommand(LoadLands);
+                return new RelayCommand(LoadMacservers);
             }
         }
 
@@ -126,15 +132,14 @@
         {
             if (string.IsNullOrEmpty(this.Filter))
             {
-                this.Lands = new ObservableCollection<Land>(this.LandsList);
+                this.Macservers = new ObservableCollection<Macserver>(this.MacserversList);
                     
             }
             else
             {
-               /* this.Lands = new ObservableCollection<Land>(
-                    this.LandsList().Where(
-                        l => l.Name.ToLower().Contains(this.Filter.ToLower()) ||
-                             l.Capital.ToLower().Contains(this.Filter.ToLower())));*/
+                this.Macservers = new ObservableCollection<Macserver>(
+                    this.MacserversList.Where(
+                        m => m.VerMacserver.ToLower().Contains(this.Filter.ToLower())));
             }
         }
         #endregion

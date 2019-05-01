@@ -125,8 +125,8 @@
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
-                var url = string.Format("{0}{1}", servicePrefix, controller);
-             //   var url = "http://192.168.1.77:1812/xad/login/jalax/34819650L".ToString();
+             var url = string.Format("{0}{1}", servicePrefix, controller);
+             //   string url = "http://192.168.1.61:1812/api/macservers";
                 var response = await client.GetAsync(url);
                 var result = await response.Content.ReadAsStringAsync();
                 

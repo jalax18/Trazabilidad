@@ -18,7 +18,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout
-            BindingContext="{Binding Lands}">
+            BindingContext="{Binding Macserver}">
             <SearchBar
                 BackgroundColor="Silver"
                 HeightRequest="46"
@@ -31,7 +31,7 @@
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
-                ItemsSource="{Binding Lands}"
+                ItemsSource="{Binding Macservers}"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding RefreshCommand}">
                 <ListView.ItemTemplate>
@@ -46,32 +46,25 @@
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <ffimageloading:CachedImage 
-                                        Grid.Column="0"
-                                        HeightRequest="30"
-                                        Source="{Binding Flag, Converter={StaticResource SvgImageSourceConverter}}"
-                                        WidthRequest="60">
-                                    </ffimageloading:CachedImage>
                                     <StackLayout 
-                                        Grid.Column="1"
+                                        Grid.Column="0"
                                         VerticalOptions="Center">
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
-                                            Text="{Binding Name}"
+                                            Text="{Binding MacserverId}"
                                             TextColor="Black">
                                         </Label>
                                         <Label 
-                                            Text="{Binding Capital}"
+                                            Text="{Binding VerMacserver}"
                                             TextColor="Black">
                                         </Label>
                                     </StackLayout>
                                     <Image 
-                                        Grid.Column="2"
+                                        Grid.Column="1"
                                         HorizontalOptions="End" 
                                         Source="ic_chevron_right">
                                     </Image>
