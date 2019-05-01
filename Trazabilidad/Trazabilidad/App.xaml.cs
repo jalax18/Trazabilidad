@@ -6,14 +6,28 @@ using Xamarin.Forms.Xaml;
 namespace Trazabilidad
 {
     using Views;
+    using ViewModels;
+    using Helpers;
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+            if (Settings.IsRemembered && !string.IsNullOrEmpty(Settings.AccessToken))
 
-            //  MainPage = new MainPage();
-            this.MainPage = new NavigationPage(new LoginPage());
+            {
+                //  MainPage = new MainPage();
+                MainViewModel.GetInstance().Stations = new StationsViewModel();
+                this.MainPage = new NavigationPage(new StationsPage());
+            }
+            else
+            {
+                //  MainPage = new MainPage();
+                MainViewModel.GetInstance().Login = new LoginViewModel();
+                this.MainPage = new NavigationPage(new LoginPage());
+            }
+            
+           
         }
 
         protected override void OnStart()
