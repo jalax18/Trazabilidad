@@ -7,12 +7,15 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.VerMpecliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaMpecliente)
         </th>
         <th></th>
     </tr>
@@ -23,9 +26,12 @@
             @Html.DisplayFor(modelItem => item.VerMpecliente)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MpeclienteId }, new { @class = "btn btn-warning" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MpeclienteId }, new { @class = "btn btn-info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MpeclienteId }, new { @class = "btn btn-danger" })
+            @Html.DisplayFor(modelItem => item.FechaMpecliente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MpeclienteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MpeclienteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MpeclienteId })
         </td>
     </tr>
 }

@@ -3,7 +3,7 @@
 namespace Trazabilidad.Common.Models
 {
     using Newtonsoft.Json;
-
+    using System;
     using System.Collections.Generic;
 
     using System.ComponentModel.DataAnnotations;
@@ -27,8 +27,7 @@ namespace Trazabilidad.Common.Models
 
         public string NameStation { get; set; }
 
-
-        
+       
         public int MacserverId { get; set; }
 
         [JsonIgnore]
@@ -61,6 +60,9 @@ namespace Trazabilidad.Common.Models
         [JsonIgnore]
 
         public virtual Garum Garum { get; set; }
+
+        public DateTime FechaEstacion { get; set; }
+
 
     }
 }

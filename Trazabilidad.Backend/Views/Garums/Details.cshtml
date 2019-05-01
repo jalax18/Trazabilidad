@@ -18,9 +18,17 @@
             @Html.DisplayFor(model => model.VerGarum)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaGarum)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.GarumId }, new { @class = "btn btn-warning" }) |
-    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GarumId }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

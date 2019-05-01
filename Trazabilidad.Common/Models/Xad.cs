@@ -3,7 +3,7 @@
 namespace Trazabilidad.Common.Models
 {
     using Newtonsoft.Json;
-
+    using System;
     using System.Collections.Generic;
 
     using System.ComponentModel.DataAnnotations;
@@ -30,6 +30,7 @@ namespace Trazabilidad.Common.Models
 
         public string VerXad { get; set; }
 
+        public DateTime FechaXad { get; set; }
 
 
         [JsonIgnore]

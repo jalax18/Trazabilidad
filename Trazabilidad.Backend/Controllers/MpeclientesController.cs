@@ -48,7 +48,7 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "MpeclienteId,VerMpecliente")] Mpecliente mpecliente)
+        public async Task<ActionResult> Create([Bind(Include = "MpeclienteId,VerMpecliente,FechaMpecliente")] Mpecliente mpecliente)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "MpeclienteId,VerMpecliente")] Mpecliente mpecliente)
+        public async Task<ActionResult> Edit([Bind(Include = "MpeclienteId,VerMpecliente,FechaMpecliente")] Mpecliente mpecliente)
         {
             if (ModelState.IsValid)
             {

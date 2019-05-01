@@ -3,7 +3,7 @@
 namespace Trazabilidad.Common.Models
 {
     using Newtonsoft.Json;
-
+    using System;
     using System.Collections.Generic;
 
     using System.ComponentModel.DataAnnotations;
@@ -29,6 +29,8 @@ namespace Trazabilidad.Common.Models
         [Index("Garum_VerGarum_Index", IsUnique = true)]
 
         public string VerGarum { get; set; }
+
+        public DateTime FechaGarum { get; set; }
 
 
 
