@@ -16,9 +16,13 @@ namespace Trazabilidad
             if (Settings.IsRemembered && !string.IsNullOrEmpty(Settings.AccessToken))
 
             {
+
                 //  MainPage = new MainPage();
-                MainViewModel.GetInstance().Stations = new StationsViewModel();
-                this.MainPage = new NavigationPage(new StationsPage());
+                MainViewModel.GetInstance().Login = new LoginViewModel();
+                this.MainPage = new NavigationPage(new LoginPage());
+                //  MainPage = new MainPage();
+              // MainViewModel.GetInstance().Stations = new StationsViewModel();
+              //  this.MainPage = new NavigationPage(new StationsPage());
             }
             else
             {

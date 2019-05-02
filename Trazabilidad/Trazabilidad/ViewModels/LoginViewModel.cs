@@ -57,7 +57,7 @@
         {
             this.apiService = new ApiService();
 
-            this.IsRemembered = true;
+            this.IsRemembered = false;
             this.IsEnabled = true;
 
             this.Email = "jalax@4glsp.com";
