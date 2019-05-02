@@ -1,8 +1,28 @@
 ﻿namespace Trazabilidad.ViewModels
 {
-    using Views;
+    using GalaSoft.MvvmLight.Command;
     using Models;
-    public class StationViewModel : Station
+    using System.Windows.Input;
+    using Xamarin.Forms;
+    using Views;
+    public class StationItemViewModel : Station
     {
-	}
+        #region Commands
+        public ICommand SelectStationCommand
+        {
+            get
+            {
+                return new RelayCommand(SelectStation);
+            }
+        }
+
+        private async void SelectStation()
+        {
+         //   MainViewModel.GetInstance().Station = new StationViewModel(this);
+            MainViewModel.GetInstance().Station = new StationViewModel(this);
+            await Application.Current.MainPage.Navigation.PushAsync(new StationPage());
+        }
+        #endregion
+
+    }
 }

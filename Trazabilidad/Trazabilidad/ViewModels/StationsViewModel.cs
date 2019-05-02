@@ -12,7 +12,7 @@
     using Models;
     using Services;
     using Xamarin.Forms;
-
+    using ViewModels;
     public class StationsViewModel : BaseViewModel
     {
         #region Services
@@ -20,14 +20,14 @@
         #endregion
 
         #region Attributes
-        private ObservableCollection<Station> stations;
+        private ObservableCollection<StationItemViewModel> stations;
       //  private List<Station> stationsList;
         private bool isRefreshing;
         private string filter;
         #endregion
 
         #region Properties
-        public ObservableCollection<Station> Stations
+        public ObservableCollection<StationItemViewModel> Stations
         {
             get { return this.stations; }
             set { SetValue(ref this.stations, value); }
@@ -101,13 +101,50 @@
 
             MainViewModel.GetInstance().StationList= (List<Station>)response.Result;
           //  this.StationsList = (List<Station>)response.Result;
-            this.Stations = new ObservableCollection<Station>(MainViewModel.GetInstance().StationList);
+            this.Stations = new ObservableCollection<StationItemViewModel>(this.ToStationItemViewModel());
             this.IsRefreshing = false;
         }
         #endregion
 
         #region Methods
+		 #region Methods
+        private IEnumerable<StationItemViewModel> ToStationItemViewModel()
+        {
+            return MainViewModel.GetInstance().StationList.Select(l => new StationItemViewModel
+            {
+                NameStation = l.NameStation,
+                MacserverId = l.MacserverId,
+                MacclienteId = l.MacclienteId,
+                MpeclienteId = l.MpeclienteId,
+                XadId = l.XadId,
+                GarumId = l.GarumId,
+                StationTypeId = l.StationTypeId,
+                FechaEstacion = l.FechaEstacion,
+            });
+        }
 
+
+        #region Methods
+        private void LoadBorders()
+        {
+            this.Borders = new ObservableCollection<Border>();
+            foreach (var border in this.Land.Borders)
+            {
+                var land = MainViewModel.GetInstance().LandsList.
+                                        Where(l => l.Alpha3Code == border).
+                                        FirstOrDefault();
+                if (land != null)
+                {
+                    this.Borders.Add(new Border
+                    {
+                        Code = land.Alpha3Code,
+                        Name = land.Name,
+                    });
+                }
+            }
+        }
+        #endregion
+        #endregion
 
 
         #endregion
@@ -133,13 +170,13 @@
         {
             if (string.IsNullOrEmpty(this.Filter))
             {
-                this.Stations = new ObservableCollection<Station>(MainViewModel.GetInstance().StationList);
+                this.Stations = new ObservableCollection<StationItemViewModel>(ToStationItemViewModel());
 
             }
             else
             {
-                this.Stations = new ObservableCollection<Station>(
-                    MainViewModel.GetInstance().StationList.Where(
+                this.Stations = new ObservableCollection<StationItemViewModel>(
+                    this.ToStationItemViewModel().Where(
                         s => s.NameStation.ToLower().Contains(this.Filter.ToLower())));
             }
         }

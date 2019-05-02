@@ -47,6 +47,12 @@
             set;
         }
 
+        public StationViewModel Station
+        {
+            get;
+            set;
+        }
+
         /*  public LandsViewModel Lands
           {
               get;
