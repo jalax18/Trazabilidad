@@ -14,12 +14,6 @@
             set;
         }
 
-        public List<StationType> StationTypeList
-        {
-            get;
-            set;
-        }
-
         #endregion
         /*   #region Properties
         public List<Land> LandsList

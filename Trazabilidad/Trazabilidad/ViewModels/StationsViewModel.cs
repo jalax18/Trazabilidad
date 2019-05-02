@@ -21,8 +21,7 @@
 
         #region Attributes
         private ObservableCollection<StationItemViewModel> stations;
-      //  private ObservableCollection<TypeStation> typestation;
-        //  private List<Station> stationsList;
+      //  private List<Station> stationsList;
         private bool isRefreshing;
         private string filter;
         #endregion
@@ -83,27 +82,6 @@
                 await Application.Current.MainPage.Navigation.PopAsync();
                 return;
             }
-
-            var response_StationType = await this.apiService.GetList<StationType>(
-                "http://localhost:1812",
-                "/api",
-                "/stationtypes");
-
-            if (!response_StationType.IsSuccess)
-            {
-                this.IsRefreshing = false;
-                await Application.Current.MainPage.DisplayAlert(
-                    Languages.Error,
-                    response_StationType.Message,
-                    Languages.Accept);
-                await Application.Current.MainPage.Navigation.PopAsync();
-                return;
-            }
-
-            MainViewModel.GetInstance().StationTypeList = (List<StationType>)response_StationType.Result;
-
-
-
 
             var response = await this.apiService.GetList<Station>(
                 "http://localhost:1812",

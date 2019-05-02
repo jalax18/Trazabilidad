@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Trazabilidad.Models
 {
-    public class StationType
+    public class TypeStation
     {
         public int  StationTypeId
         {
