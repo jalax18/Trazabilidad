@@ -180,6 +180,8 @@
     <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
+    <Compile Include="Controllers\StationsController.cs" />
+    <Compile Include="Controllers\StationTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />
     <Compile Include="Controllers\XadsController.cs" />
@@ -296,6 +298,11 @@
     <Content Include="Views\Stations\Details.cshtml" />
     <Content Include="Views\Stations\Edit.cshtml" />
     <Content Include="Views\Stations\Index.cshtml" />
+    <Content Include="Views\Stations1\Create.cshtml" />
+    <Content Include="Views\Stations1\Delete.cshtml" />
+    <Content Include="Views\Stations1\Details.cshtml" />
+    <Content Include="Views\Stations1\Edit.cshtml" />
+    <Content Include="Views\Stations1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

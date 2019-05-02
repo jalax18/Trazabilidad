@@ -1,0 +1,82 @@
+﻿@model Trazabilidad.Common.Models.Station
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Station</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Garum.VerGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Garum.VerGarum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maccliente.VerMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maccliente.VerMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Macserver.VerMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Macserver.VerMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mpeccliente.VerMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mpeccliente.VerMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StationType.StationTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StationType.StationTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Xad.VerXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Xad.VerXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameStation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameStation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEstacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEstacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

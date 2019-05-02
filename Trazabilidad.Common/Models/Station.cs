@@ -61,7 +61,7 @@ namespace Trazabilidad.Common.Models
 
         public virtual Garum Garum { get; set; }
 
-        public string StationTypeId { get; set; }
+        public int StationTypeId { get; set; }
 
         [JsonIgnore]
 

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Trazabilidad.Common.Models.Station>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Garum.VerGarum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maccliente.VerMaccliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Macserver.VerMacserver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mpeccliente.VerMpecliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StationType.StationTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Xad.VerXad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameStation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEstacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Garum.VerGarum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maccliente.VerMaccliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Macserver.VerMacserver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mpeccliente.VerMpecliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StationType.StationTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Xad.VerXad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameStation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEstacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StationId })
+        </td>
+    </tr>
+}
+
+</table>
