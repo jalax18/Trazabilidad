@@ -124,26 +124,7 @@
         }
 
 
-        #region Methods
-        private void LoadBorders()
-        {
-            this.Borders = new ObservableCollection<Border>();
-            foreach (var border in this.Land.Borders)
-            {
-                var land = MainViewModel.GetInstance().LandsList.
-                                        Where(l => l.Alpha3Code == border).
-                                        FirstOrDefault();
-                if (land != null)
-                {
-                    this.Borders.Add(new Border
-                    {
-                        Code = land.Alpha3Code,
-                        Name = land.Name,
-                    });
-                }
-            }
-        }
-        #endregion
+
         #endregion
 
 
