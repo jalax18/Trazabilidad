@@ -6,7 +6,6 @@ namespace Trazabilidad.Models
 {
     public class Station
     {
-
             public int StationId { get; set; }
             public string NameStation { get; set; }
             public string VersionMacserver { get; set; }

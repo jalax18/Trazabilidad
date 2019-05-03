@@ -2,8 +2,6 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-    xmlns:i18n="clr-namespace:Trazabilidad.Helpers"
     x:Class="Trazabilidad.Views.StationPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Icon="ic_action_info"
@@ -17,7 +15,7 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
-                    Text="{Binding NameStation}"
+                    Text="{Binding Station.NameStation}"
                     TextColor="Black">
                 </Label>
                 
@@ -36,7 +34,7 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         FontAttributes="Bold"
-                        Text="{Binding VersionMacserver}"
+                        Text="{Binding Station.VersionMacserver}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -49,7 +47,7 @@
                         Grid.Column="1"
                         Grid.Row="1"
                         FontAttributes="Bold"
-                        Text="{Binding VersionMaccliente}"
+                        Text="{Binding Station.VersionMaccliente}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -62,7 +60,7 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         FontAttributes="Bold"
-                        Text="{Binding VersionMpecliente}"
+                        Text="{Binding Station.VersionMpecliente}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -75,7 +73,7 @@
                         Grid.Column="1"
                         Grid.Row="3"
                         FontAttributes="Bold"
-                        Text="{Binding VersionXad}"
+                        Text="{Binding Station.VersionXad}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -88,7 +86,7 @@
                         Grid.Column="1"
                         Grid.Row="4"
                         FontAttributes="Bold"
-                        Text="{Binding VersionGarum}"
+                        Text="{Binding Station.VersionGarum}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -101,7 +99,7 @@
                         Grid.Column="1"
                         Grid.Row="5"
                         FontAttributes="Bold"
-                        Text="{Binding FechaEstacion}"
+                        Text="{Binding Station.FechaEstacion}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -114,7 +112,7 @@
                         Grid.Column="1"
                         Grid.Row="6"
                         FontAttributes="Bold"
-                        Text="{Binding TipoEstacion}"
+                        Text="{Binding Station.TipoEstacion}"
                         TextColor="Black">
                     </Label>
                     

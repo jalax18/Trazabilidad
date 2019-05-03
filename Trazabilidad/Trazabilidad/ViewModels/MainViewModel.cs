@@ -13,11 +13,7 @@
             get;
             set;
         }
-        public List<TypeStation> StationTypeList
-        {
-            get;
-            set;
-        }
+       
         #endregion
         /*   #region Properties
         public List<Land> LandsList
