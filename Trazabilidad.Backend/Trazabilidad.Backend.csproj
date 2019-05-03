@@ -181,6 +181,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
     <Compile Include="Controllers\StationsController.cs" />
+    <Compile Include="Controllers\StationServicesController.cs" />
     <Compile Include="Controllers\StationTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />
@@ -303,6 +304,11 @@
     <Content Include="Views\Stations1\Details.cshtml" />
     <Content Include="Views\Stations1\Edit.cshtml" />
     <Content Include="Views\Stations1\Index.cshtml" />
+    <Content Include="Views\StationServices\Create.cshtml" />
+    <Content Include="Views\StationServices\Delete.cshtml" />
+    <Content Include="Views\StationServices\Details.cshtml" />
+    <Content Include="Views\StationServices\Edit.cshtml" />
+    <Content Include="Views\StationServices\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

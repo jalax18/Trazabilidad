@@ -55,6 +55,7 @@
     <Compile Include="Models\Maccliente.cs" />
     <Compile Include="Models\Macserver.cs" />
     <Compile Include="Models\Mpecliente.cs" />
+    <Compile Include="Models\StationService.cs" />
     <Compile Include="Models\Station.cs" />
     <Compile Include="Models\StationType.cs" />
     <Compile Include="Models\Xad.cs" />
