@@ -84,7 +84,7 @@
             }
 
             var response = await this.apiService.GetList<Station>(
-                "http://localhost:1812",
+                "http://2.139.147.209:1601",
                 "/api",
                 "/stationservices");
 

@@ -7,6 +7,9 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="{i18n:Translate Login}">
     <ContentPage.Content>
+
+
+
         <ScrollView
             BindingContext="{Binding Login}">
             <StackLayout
@@ -119,5 +122,6 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

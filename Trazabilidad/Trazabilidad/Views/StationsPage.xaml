@@ -8,26 +8,20 @@
     xmlns:i18n="clr-namespace:Trazabilidad.Helpers"
     x:Class="Trazabilidad.Views.StationsPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
-    BackgroundColor="Silver"
+    BackgroundColor="White"
     Title="Listados de EESS">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ffimageloadingsvg:SvgImageSourceConverter 
-                x:Key="SvgImageSourceConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Stations}">
             <SearchBar
-                BackgroundColor="Silver"
+                BackgroundColor="white"
                 HeightRequest="46"
                 Text="{Binding Filter, Mode=TwoWay}"
                 Placeholder="{i18n:Translate Search}"
                 SearchCommand="{Binding SearchCommand}">
             </SearchBar>
             <ListView 
-                BackgroundColor="Silver"
+                BackgroundColor="White"
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
@@ -56,34 +50,19 @@
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
-                                            Text="Estacion de servicio"
-                                            TextColor="Black">
-                                        </Label>
-                                        <Label 
-                                            FontAttributes="Bold"
-                                            FontSize="Large" 
                                             Text="{Binding NameStation}"
                                             TextColor="Black">
                                         </Label>
-                                    </StackLayout>
-                                    <StackLayout 
-                                        Grid.Column="1"
-                                        VerticalOptions="Center">
                                         <Label 
                                             FontAttributes="Bold"
-                                            FontSize="Medium" 
-                                            Text="Sistema"
-                                            TextColor="Black">
-                                        </Label>
-                                        <Label 
-                                            FontAttributes="Bold"
-                                            FontSize="Large" 
-                                            Text="{Binding TipoEstacion}"
+                                            FontSize="Default" 
+                                             Text="{Binding TipoEstacion}"
                                             TextColor="Black">
                                         </Label>
                                     </StackLayout>
+                                    
                                     <Image 
-                                        Grid.Column="2"
+                                        Grid.Column="1"
                                         HorizontalOptions="End" 
                                         Source="ic_chevron_right">
                                     </Image>

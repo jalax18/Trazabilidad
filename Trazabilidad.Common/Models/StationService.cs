@@ -25,6 +25,8 @@ namespace Trazabilidad.Common.Models
 
         [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
 
+        [Index("StationService_NameStation_Index", IsUnique = true)]
+
         public string NameStation { get; set; }
 
         [Display(Name = "Version Macserver")]
