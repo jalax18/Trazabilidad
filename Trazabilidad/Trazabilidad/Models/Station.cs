@@ -9,13 +9,14 @@ namespace Trazabilidad.Models
 
             public int StationId { get; set; }
             public string NameStation { get; set; }
-            public int MacserverId { get; set; }
-            public int MacclienteId { get; set; }
-            public int MpeclienteId { get; set; }
-            public int XadId { get; set; }
-            public int GarumId { get; set; }
-            public int StationTypeId { get; set; }
+            public string VersionMacserver { get; set; }
+            public string VersionMaccliente { get; set; }
+            public string VersionMpecliente { get; set; }
+            public string VersionXad { get; set; }
+            public string VersionGarum { get; set; }
+            public string TipoEstacion { get; set; }
             public DateTime FechaEstacion { get; set; }
         
+
     }
 }

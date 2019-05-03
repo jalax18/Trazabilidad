@@ -78,7 +78,7 @@
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Large" 
-                                            Text="{Binding StationTypeId}"
+                                            Text="{Binding TipoEstacion}"
                                             TextColor="Black">
                                         </Label>
                                     </StackLayout>

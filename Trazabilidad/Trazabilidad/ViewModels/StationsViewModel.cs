@@ -86,7 +86,7 @@
             var response = await this.apiService.GetList<Station>(
                 "http://localhost:1812",
                 "/api",
-                "/stations");
+                "/stationservices");
 
             if (!response.IsSuccess)
             {
@@ -113,12 +113,12 @@
             return MainViewModel.GetInstance().StationList.Select(l => new StationItemViewModel
             {
                 NameStation = l.NameStation,
-                MacserverId = l.MacserverId,
-                MacclienteId = l.MacclienteId,
-                MpeclienteId = l.MpeclienteId,
-                XadId = l.XadId,
-                GarumId = l.GarumId,
-                StationTypeId = l.StationTypeId,
+                VersionMacserver = l.VersionMacserver,
+                VersionMaccliente = l.VersionMaccliente,
+                VersionMpecliente = l.VersionMpecliente,
+                VersionXad = l.VersionXad,
+                VersionGarum = l.VersionGarum,
+                TipoEstacion = l.TipoEstacion,
                 FechaEstacion = l.FechaEstacion,
             });
         }

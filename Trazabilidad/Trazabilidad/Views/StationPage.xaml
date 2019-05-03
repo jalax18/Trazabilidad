@@ -2,20 +2,12 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-    xmlns:i18n="clr-namespace:Lands.Helpers"
+    xmlns:i18n="clr-namespace:Trazabilidad.Helpers"
     x:Class="Trazabilidad.Views.StationPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Icon="ic_action_info"
     Title="Informacion Versiones Estacion de Servicio">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ffimageloadingsvg:SvgImageSourceConverter 
-                x:Key="SvgImageSourceConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Station}">
@@ -25,7 +17,7 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
-                    Text="{Binding Station.NameStation}"
+                    Text="{Binding NameStation}"
                     TextColor="Black">
                 </Label>
                 
@@ -44,7 +36,7 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         FontAttributes="Bold"
-                        Text="{Binding Station.MacserverId}"
+                        Text="{Binding VersionMacserver}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -57,7 +49,7 @@
                         Grid.Column="1"
                         Grid.Row="1"
                         FontAttributes="Bold"
-                        Text="{Binding Station.MaccclienteId}"
+                        Text="{Binding VersionMaccliente}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -70,7 +62,7 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         FontAttributes="Bold"
-                        Text="{Binding Station.MpeclienteId}"
+                        Text="{Binding VersionMpecliente}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -83,7 +75,7 @@
                         Grid.Column="1"
                         Grid.Row="3"
                         FontAttributes="Bold"
-                        Text="{Binding Station.XadId}"
+                        Text="{Binding VersionXad}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -96,7 +88,7 @@
                         Grid.Column="1"
                         Grid.Row="4"
                         FontAttributes="Bold"
-                        Text="{Binding Station.GarumId}"
+                        Text="{Binding VersionGarum}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -109,7 +101,7 @@
                         Grid.Column="1"
                         Grid.Row="5"
                         FontAttributes="Bold"
-                        Text="{Binding Station.FechaEstacion}"
+                        Text="{Binding FechaEstacion}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -122,7 +114,7 @@
                         Grid.Column="1"
                         Grid.Row="6"
                         FontAttributes="Bold"
-                        Text="{Binding Station.StationTypeId}"
+                        Text="{Binding TipoEstacion}"
                         TextColor="Black">
                     </Label>
                     
