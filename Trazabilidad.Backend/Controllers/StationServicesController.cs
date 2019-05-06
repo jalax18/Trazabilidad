@@ -102,7 +102,28 @@ namespace Trazabilidad.Backend.Controllers
             {
                 return HttpNotFound();
             }
-            return View(stationService);
+
+            var view = this.ToView(stationService);
+            return View(view);
+        }
+
+        private StationServiceView ToView(StationService stationService)
+        {
+            return new StationServiceView
+            {
+                StationId = stationService.StationId,
+                NameStation = stationService.NameStation,
+                VersionMacserver = stationService.VersionMacserver,
+                VersionMaccliente = stationService.VersionMaccliente,
+                VersionMpecliente = stationService.VersionMpecliente,
+                VersionXad = stationService.VersionXad,
+                VersionGarum = stationService.VersionGarum,
+                TipoEstacion = stationService.TipoEstacion,
+                FechaEstacion = stationService.FechaEstacion,
+                Server = stationService.Server,
+                NumeroTpvs = stationService.NumeroTpvs,
+                ImagePath = stationService.ImagePath,
+            };
         }
 
         // POST: StationServices/Edit/5
@@ -110,15 +131,25 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs")] StationService stationService)
+        public async Task<ActionResult> Edit( StationServiceView view)
         {
             if (ModelState.IsValid)
             {
+                var pic = view.ImagePath;
+                var folder = "~/Content/StationPhotos";
+
+                if (view.ImageFile != null)
+                {
+                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
+                    pic = $"{folder}/{pic}";
+                    //   pic = string.Format("{0}/{1}", folder, pic);
+                }
+                var stationService = this.ToStationService(view, pic);
                 db.Entry(stationService).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(stationService);
+            return View(view);
         }
 
         // GET: StationServices/Delete/5

@@ -120,6 +120,9 @@
                 VersionGarum = l.VersionGarum,
                 TipoEstacion = l.TipoEstacion,
                 FechaEstacion = l.FechaEstacion,
+                ImagePath=l.ImagePath,
+                Server=l.Server,
+                NumeroTpvs=l.NumeroTpvs,
             });
         }
 

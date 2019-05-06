@@ -11,14 +11,15 @@
             BindingContext="{Binding Station}">
             <StackLayout
                 Padding="30">
+                <StackLayout>
                 <Label
-                    FontSize="Large"
+                    FontSize="Medium"
                     FontAttributes="Bold"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="StartAndExpand"
                     Text="{Binding Station.NameStation}"
                     TextColor="Black">
                 </Label>
-                
+                </StackLayout>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -27,120 +28,135 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="0"
-                        Text="Version Macserver"
+                        Text="Tipo de Sistema"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
                         Grid.Row="0"
                         FontAttributes="Bold"
-                        Text="{Binding Station.VersionMacserver}"
+                        Text="{Binding Station.TipoEstacion}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
                         Grid.Row="1"
-                        Text="Versión Maccliente"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionMaccliente}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Text="Versión Mpecliente"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionMpecliente}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="3"
                         Text="Version XAD"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
-                        Grid.Row="3"
+                        Grid.Row="1"
                         FontAttributes="Bold"
                         Text="{Binding Station.VersionXad}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="4"
+                        Grid.Row="2"
                         Text="Version Garum"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
-                        Grid.Row="4"
+                        Grid.Row="2"
                         FontAttributes="Bold"
                         Text="{Binding Station.VersionGarum}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="5"
-                        Text="Fecha Ultima Actualización"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="5"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.FechaEstacion}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="6"
-                        Text="Tipo de Sistema"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="6"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.TipoEstacion}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="7"
+                        Grid.Row="3"
                         Text="Servidor"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
-                        Grid.Row="7"
+                        Grid.Row="3"
                         FontAttributes="Bold"
                         Text="{Binding Station.Server}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="8"
+                        Grid.Row="4"
                         Text="Nº de Tpvs"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.NumeroTpvs}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="Version Macserver"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.VersionMacserver}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Versión Maccliente"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.VersionMaccliente}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="Versión Mpecliente"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.VersionMpecliente}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Version Garum"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
                         Grid.Row="8"
                         FontAttributes="Bold"
-                        Text="{Binding Station.numerotpvs}"
+                        Text="{Binding Station.VersionGarum}"
                         TextColor="Black">
                     </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text="Fecha Ultima Actualización"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="9"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.FechaEstacion}"
+                        TextColor="Black">
+                    </Label>
+                   
+                    
                 </Grid>
             </StackLayout>
         </ScrollView>

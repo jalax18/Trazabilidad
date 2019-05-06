@@ -40,9 +40,9 @@
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.1*"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Image
                                         Grid.Column="0"
