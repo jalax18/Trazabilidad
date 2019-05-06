@@ -76,8 +76,10 @@ namespace Trazabilidad.Common.Models
         [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public String TipoEstacion { get; set; }
 
-        
+        [DataType(DataType.Date)]
         public DateTime FechaEstacion { get; set; }
+
+        public string ImagePath { get; set; }
 
 
     }

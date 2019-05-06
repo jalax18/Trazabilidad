@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Trazabilidad.Backend.Models;
-using Trazabilidad.Common.Models;
-
+﻿
 namespace Trazabilidad.Backend.Controllers
 {
+
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.Net;
+    using System.Web;
+    using System.Web.Mvc;
+    using Trazabilidad.Backend.Models;
+    using Trazabilidad.Common.Models;
+    using Helpers;
+    using System;
+
     public class StationServicesController : Controller
     {
         private LocalDataContext db = new LocalDataContext();
@@ -48,16 +49,45 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion")] StationService stationService)
+        public async Task<ActionResult> Create(StationServiceView view)
         {
             if (ModelState.IsValid)
             {
+                var pic = string.Empty;
+                var folder = "~/Content/StationPhotos";
+
+                if (view.ImageFile != null)
+                {
+                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
+                    pic = $"{folder}/{pic}";
+                }
+
+                var stationService = this.ToStationService(view,pic);
                 db.StationServices.Add(stationService);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(stationService);
+            return View(view);
+        }
+
+        private StationService ToStationService(StationServiceView view,string pic)
+        {
+            return new StationService {
+                NameStation=view.NameStation,
+                VersionMacserver=view.VersionMacserver,
+                VersionMaccliente=view.VersionMaccliente,
+                VersionMpecliente=view.VersionMpecliente,
+                VersionXad=view.VersionXad,
+                VersionGarum=view.VersionGarum,
+                TipoEstacion=view.TipoEstacion,
+                FechaEstacion=view.FechaEstacion,
+                StationId=view.StationId,
+                ImagePath=pic,
+
+           
+
+            };
         }
 
         // GET: StationServices/Edit/5
