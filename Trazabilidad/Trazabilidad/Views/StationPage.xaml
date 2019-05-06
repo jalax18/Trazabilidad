@@ -10,7 +10,7 @@
         <ScrollView
             BindingContext="{Binding Station}">
             <StackLayout
-                Padding="5">
+                Padding="30">
                 <Label
                     FontSize="Large"
                     FontAttributes="Bold"
@@ -115,8 +115,32 @@
                         Text="{Binding Station.TipoEstacion}"
                         TextColor="Black">
                     </Label>
-                    
-                   
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="Servidor"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.Server}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Nº de Tpvs"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="8"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.numerotpvs}"
+                        TextColor="Black">
+                    </Label>
                 </Grid>
             </StackLayout>
         </ScrollView>

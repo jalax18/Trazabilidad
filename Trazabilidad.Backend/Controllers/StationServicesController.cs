@@ -1,18 +1,18 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using Trazabilidad.Backend.Models;
+using Trazabilidad.Common.Models;
+
 namespace Trazabilidad.Backend.Controllers
 {
-
-    using System.Data.Entity;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using System.Net;
-    using System.Web;
-    using System.Web.Mvc;
-    using Trazabilidad.Backend.Models;
-    using Trazabilidad.Common.Models;
     using Helpers;
-    using System;
-
     public class StationServicesController : Controller
     {
         private LocalDataContext db = new LocalDataContext();
@@ -60,9 +60,10 @@ namespace Trazabilidad.Backend.Controllers
                 {
                     pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
                     pic = $"{folder}/{pic}";
+                 //   pic = string.Format("{0}/{1}", folder, pic);
                 }
-
                 var stationService = this.ToStationService(view,pic);
+
                 db.StationServices.Add(stationService);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -74,6 +75,7 @@ namespace Trazabilidad.Backend.Controllers
         private StationService ToStationService(StationServiceView view,string pic)
         {
             return new StationService {
+                StationId=view.StationId,
                 NameStation=view.NameStation,
                 VersionMacserver=view.VersionMacserver,
                 VersionMaccliente=view.VersionMaccliente,
@@ -82,11 +84,9 @@ namespace Trazabilidad.Backend.Controllers
                 VersionGarum=view.VersionGarum,
                 TipoEstacion=view.TipoEstacion,
                 FechaEstacion=view.FechaEstacion,
-                StationId=view.StationId,
+                Server=view.Server,
+                NumeroTpvs=view.NumeroTpvs,
                 ImagePath=pic,
-
-           
-
             };
         }
 
@@ -110,7 +110,7 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion")] StationService stationService)
+        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs")] StationService stationService)
         {
             if (ModelState.IsValid)
             {

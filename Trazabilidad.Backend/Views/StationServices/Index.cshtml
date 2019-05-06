@@ -38,6 +38,12 @@
         <th>
             @Html.DisplayNameFor(model => model.ImagePath)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Server)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroTpvs)
+        </th>
         <th></th>
     </tr>
 
@@ -67,15 +73,23 @@
         <td>
             @Html.DisplayFor(modelItem => item.FechaEstacion)
         </td>
-        @if (!string.IsNullOrEmpty(item.ImagePath))
-        {
-            <img src="@Url.Content(item.ImagePath)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
-        }
-
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.StationId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.StationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.StationId })
+            @if (!string.IsNullOrEmpty(item.ImagePath))
+            {
+                <img src="@Url.Content(item.ImagePath)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+            }
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Server)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroTpvs)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StationId })
         </td>
     </tr>
 }

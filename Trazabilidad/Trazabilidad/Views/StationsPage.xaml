@@ -44,17 +44,23 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackLayout 
+                                    <Image
                                         Grid.Column="0"
+                                        Source="{Binding ImagePath}">
+
+                                    </Image>
+
+                                    <StackLayout 
+                                        Grid.Column="1"
                                         VerticalOptions="Center">
                                         <Label 
-                                            FontAttributes="Bold"
-                                            FontSize="Medium" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
                                             Text="{Binding NameStation}"
                                             TextColor="Black">
                                         </Label>
                                         <Label 
-                                            FontAttributes="Bold"
+                                            FontAttributes="None"
                                             FontSize="Default" 
                                              Text="{Binding TipoEstacion}"
                                             TextColor="Black">
@@ -62,7 +68,7 @@
                                     </StackLayout>
                                     
                                     <Image 
-                                        Grid.Column="1"
+                                        Grid.Column="2"
                                         HorizontalOptions="End" 
                                         Source="ic_chevron_right">
                                     </Image>

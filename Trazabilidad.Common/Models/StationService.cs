@@ -82,5 +82,15 @@ namespace Trazabilidad.Common.Models
         public string ImagePath { get; set; }
 
 
+        [Display(Name = "Servidor XAD")]
+        [Required(ErrorMessage = "The field {0} is requiered.")]
+        public bool Server { get; set; }
+
+
+        [Display(Name = "Nº TPVS")]
+        [Required(ErrorMessage = "The field {0} is requiered.")]
+        public int  NumeroTpvs { get; set; }
+
+
     }
 }
