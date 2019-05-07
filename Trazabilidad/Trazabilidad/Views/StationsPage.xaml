@@ -40,13 +40,14 @@
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.1*"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="6*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Image
                                         Grid.Column="0"
-                                        Source="{Binding ImagePath}">
+                                        Source="{Binding ImageFullPath}"
+                                        WidthRequest="100">
 
                                     </Image>
 

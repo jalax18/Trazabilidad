@@ -91,6 +91,17 @@ namespace Trazabilidad.Common.Models
         [Required(ErrorMessage = "The field {0} is requiered.")]
         public int  NumeroTpvs { get; set; }
 
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(ImagePath))
+                {
+                    return null;
+                }
+                return $"http://2.139.147.209:1601/{this.ImagePath.Substring(1)}";
+            }
+        }
 
     }
 }

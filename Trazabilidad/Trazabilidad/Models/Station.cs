@@ -15,10 +15,21 @@ namespace Trazabilidad.Models
             public string VersionGarum { get; set; }
             public string TipoEstacion { get; set; }
             public DateTime FechaEstacion { get; set; }
-            public string ImagePath { get; set; }
-            public bool Server { get; set; }
+        public string ImagePath { get; set; }
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(ImagePath))
+                {
+                    return null;
+                }
+                return $"http://2.139.147.209:1601/{this.ImagePath.Substring(1)}";
+            }
+                }
+        public bool Server { get; set; }
             public int NumeroTpvs { get; set; }
-
+        
 
     }
 }
