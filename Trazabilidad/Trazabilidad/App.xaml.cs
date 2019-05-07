@@ -10,6 +10,8 @@ namespace Trazabilidad
     using Helpers;
     public partial class App : Application
     {
+        public static NavigationPage Navigator { get; internal set; }
+
         public App()
         {
             InitializeComponent();
@@ -18,11 +20,11 @@ namespace Trazabilidad
             {
 
                 //  MainPage = new MainPage();
-                MainViewModel.GetInstance().Login = new LoginViewModel();
-                this.MainPage = new NavigationPage(new LoginPage());
+               // MainViewModel.GetInstance().Login = new LoginViewModel();
+                //this.MainPage = new NavigationPage(new LoginPage());
                 //  MainPage = new MainPage();
-              // MainViewModel.GetInstance().Stations = new StationsViewModel();
-              //  this.MainPage = new NavigationPage(new StationsPage());
+               MainViewModel.GetInstance().Stations = new StationsViewModel();
+                this.MainPage = new NavigationPage(new MasterPage());
             }
             else
             {
