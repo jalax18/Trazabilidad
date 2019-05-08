@@ -24,7 +24,7 @@ namespace Trazabilidad
                 //this.MainPage = new NavigationPage(new LoginPage());
                 //  MainPage = new MainPage();
                MainViewModel.GetInstance().Stations = new StationsViewModel();
-                this.MainPage = new NavigationPage(new MasterPage());
+                this.MainPage = new MasterPage();
             }
             else
             {
