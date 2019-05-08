@@ -146,7 +146,7 @@
 //            mainViewModel.Macserver = new MacserverViewModel();
   //          await Application.Current.MainPage.Navigation.PushAsync(new MacserverPage());
             mainViewModel.Stations = new StationsViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new StationsPage());
+            await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;
