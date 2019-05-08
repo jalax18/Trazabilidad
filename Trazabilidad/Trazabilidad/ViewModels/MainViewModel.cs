@@ -1,6 +1,8 @@
 ﻿namespace Trazabilidad.ViewModels
 {
+    using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using Models;
 
     public class MainViewModel
@@ -13,7 +15,11 @@
             get;
             set;
         }
-       
+        public ObservableCollection<MenuItemViewModel> Menus
+        {
+            get;
+            set;
+        }
         #endregion
         /*   #region Properties
         public List<Land> LandsList
@@ -71,6 +77,42 @@
         {
             instance = this;
             this.Login = new LoginViewModel();
+            this.LoadMenu();
+        }
+
+        private void LoadMenu()
+        {
+            this.Menus = new ObservableCollection<MenuItemViewModel>();
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_settings",
+                PageName="LastVersion",
+                Title="Ver Ultimas Versiones",
+
+            });
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_insert_chart",
+                PageName = "LastVersion",
+                Title = "Programador Estaciones",
+
+            });
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_insert_chart",
+                PageName = "LastVersion",
+                Title = "Acerca de",
+
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_insert_chart",
+                PageName = "LastVersion",
+                Title = "Logoff",
+
+            });
+
         }
         #endregion
 
