@@ -26,5 +26,7 @@ namespace Trazabilidad.Backend.Models
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Station> Stations { get; set; }
 
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.StationService> StationServices { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.UltimasVersiones> UltimasVersiones { get; set; }
     }
 }

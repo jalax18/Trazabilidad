@@ -183,6 +183,7 @@
     <Compile Include="Controllers\StationsController.cs" />
     <Compile Include="Controllers\StationServicesController.cs" />
     <Compile Include="Controllers\StationTypesController.cs" />
+    <Compile Include="Controllers\UltimasVersionesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />
     <Compile Include="Controllers\XadsController.cs" />
@@ -313,6 +314,11 @@
     <Content Include="Views\StationServices\Details.cshtml" />
     <Content Include="Views\StationServices\Edit.cshtml" />
     <Content Include="Views\StationServices\Index.cshtml" />
+    <Content Include="Views\UltimasVersiones\Create.cshtml" />
+    <Content Include="Views\UltimasVersiones\Delete.cshtml" />
+    <Content Include="Views\UltimasVersiones\Details.cshtml" />
+    <Content Include="Views\UltimasVersiones\Edit.cshtml" />
+    <Content Include="Views\UltimasVersiones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

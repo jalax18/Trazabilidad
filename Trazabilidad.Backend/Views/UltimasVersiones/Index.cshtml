@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Trazabilidad.Common.Models.UltimasVersiones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionMacserver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVersionMacserver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionMaccliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVersionMaccliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionMpecliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVersionMpecliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionXad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVersionXad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersionGarum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVersionGarum)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VersionMacserver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVersionMacserver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VersionMaccliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVersionMaccliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VersionMpecliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVersionMpecliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VersionXad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVersionXad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VersionGarum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVersionGarum)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdVersiones }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdVersiones }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdVersiones })
+        </td>
+    </tr>
+}
+
+</table>

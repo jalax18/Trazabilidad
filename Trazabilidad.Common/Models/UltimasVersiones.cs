@@ -42,7 +42,7 @@ namespace Trazabilidad.Common.Models
 
         [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
 
-        [Index("UltimasVersiones_VersionMaccliente_Index", IsUnique = true)]
+        [Index("UltimasVersiones_VersionMpecliente_Index", IsUnique = true)]
 
         public string VersionMpecliente { get; set; }
 
@@ -73,9 +73,7 @@ namespace Trazabilidad.Common.Models
 
 
 
-        [JsonIgnore]
-
-        public virtual ICollection<Station> Stations { get; set; }
+       
 
     }
 

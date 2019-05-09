@@ -1,0 +1,98 @@
+﻿@model Trazabilidad.Common.Models.UltimasVersiones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UltimasVersiones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionGarum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionGarum)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdVersiones }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

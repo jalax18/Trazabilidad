@@ -1,0 +1,104 @@
+﻿@model Trazabilidad.Common.Models.UltimasVersiones
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UltimasVersiones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMacserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMacserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMaccliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMaccliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionMpecliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionMpecliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionXad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionXad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionGarum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVersionGarum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVersionGarum)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
