@@ -29,6 +29,11 @@
         {
            App.Master.IsPresented = false;
 
+                /*  Application.Current.MainPage.DisplayAlert(
+                   "Aviso",
+                   this.PageName,
+                   "Accept");*/
+
             if (this.PageName == "LoginPage")
             {
   //              Settings.IsRemembered = "false";
@@ -38,8 +43,10 @@
                 Application.Current.MainPage = new NavigationPage(
                     new LoginPage());
             }
-            else if (this.PageName == "UltimasVersionesPage")
+            else if (this.PageName == "UltimasVersionesPage") 
             {
+               
+
                 MainViewModel.GetInstance().UltimasVersiones = new UltimasVersionesViewModel();
                 App.Navigator.PushAsync(new UltimasVersionesPage());
             }

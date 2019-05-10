@@ -75,7 +75,7 @@
                                             Grid.Row="1"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                            Text="{Binding VersionMaccliente}"
+                                            Text="{Binding VersionMacserver}"
                                             TextColor="Black">
                                     </Label>
                                     <Label 

@@ -143,10 +143,10 @@
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
 
-            mainViewModel.UltimasVersiones = new UltimasVersionesViewModel();
+          //  mainViewModel.UltimasVersiones = new UltimasVersionesViewModel();
+          //  await Application.Current.MainPage.Navigation.PushAsync((new UltimasVersionesPage()));
+            mainViewModel.Stations = new StationsViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
-            //mainViewModel.Stations = new StationsViewModel();
-            //await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;

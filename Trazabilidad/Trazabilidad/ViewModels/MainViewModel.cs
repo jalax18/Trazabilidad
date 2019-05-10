@@ -91,7 +91,7 @@
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_settings",
-                PageName="LastVersion",
+                PageName="UltimasVersionesPage",
                 Title="Ver Ultimas Versiones",
 
             });
@@ -113,7 +113,7 @@
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
-                PageName = "LastVersion",
+                PageName = "LoginPage",
                 Title = "Logoff",
 
             });
