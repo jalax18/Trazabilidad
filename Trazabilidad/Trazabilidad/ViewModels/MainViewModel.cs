@@ -36,11 +36,11 @@
         #endregion*/
 
         #region ViewModels
-       /* public UltimasVersiones UltimasVersiones
+        public UltimasVersionesViewModel UltimasVersiones
         {
             get;
             set;
-        }*/
+        }
         public LoginViewModel Login
         {
             get;

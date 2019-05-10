@@ -27,22 +27,22 @@
 
         private void Navigate()
         {
-           /*App.Master.IsPresented = false;
+           App.Master.IsPresented = false;
 
             if (this.PageName == "LoginPage")
             {
-                Settings.IsRemembered = "false";
+  //              Settings.IsRemembered = "false";
                 var mainViewModel = MainViewModel.GetInstance();
-                mainViewModel.Token = null;
-                mainViewModel.User = null;
+  //              mainViewModel.Token = null;
+  //              mainViewModel.User = null;
                 Application.Current.MainPage = new NavigationPage(
                     new LoginPage());
             }
-            else if (this.PageName == "MyProfilePage")
+            else if (this.PageName == "UltimasVersionesPage")
             {
-                MainViewModel.GetInstance().MyProfile = new MyProfileViewModel();
-                App.Navigator.PushAsync(new MyProfilePage());
-            }*/
+                MainViewModel.GetInstance().UltimasVersiones = new UltimasVersionesViewModel();
+                App.Navigator.PushAsync(new UltimasVersionesPage());
+            }
         }
         #endregion
     }

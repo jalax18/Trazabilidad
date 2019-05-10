@@ -83,7 +83,7 @@
                 return;
             }
 
-            var response = await this.apiService.GetList<Station>(
+            var response = await this.apiService.GetList<UltimasVersiones>(
                 "http://2.139.147.209:1601",
                 "/api",
                 "/UltimasVersiones");
@@ -99,8 +99,8 @@
                 return;
             }
 
-            MainViewModel.GetInstance().StationList= (List<Station>)response.Result;
-          //  this.StationsList = (List<Station>)response.Result;
+          //  MainViewModel.GetInstance().StationList= (List<Station>)response.Result;
+            this.UltimasVersionesList = (List<UltimasVersiones>)response.Result;
             this.UltimasVersiones = new ObservableCollection<UltimasVersiones>(this.UltimasVersionesList);
             this.IsRefreshing = false;
         }

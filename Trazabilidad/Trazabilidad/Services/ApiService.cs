@@ -126,8 +126,7 @@
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
              var url = string.Format("{0}{1}", servicePrefix, controller);
-             //   string url = "http://192.168.1.61:1812/api/macservers";
-                var response = await client.GetAsync(url);
+               var response = await client.GetAsync(url);
                 var result = await response.Content.ReadAsStringAsync();
                 
                 if (!response.IsSuccessStatusCode)

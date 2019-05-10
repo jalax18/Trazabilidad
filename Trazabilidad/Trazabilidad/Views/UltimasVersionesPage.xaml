@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:i18n="clr-namespace:Trazabilidad.Helpers"
+    x:Class="Trazabilidad.Views.UltimasVersionesPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    BackgroundColor="White"
+    Title="Listados de Ultimas Versiones en Produccion">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding UltimasVersiones}">
+          
+            <ListView 
+                BackgroundColor="White"
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding UltimasVersiones}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectStationCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Version Xad"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding VersionXad}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding FechaVersionXad}"
+                                            TextColor="Black">
+                                    </Label>
+
+
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Version Macserver"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding VersionMaccliente}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding FechaVersionMacserver}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="2"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Version Maccliente"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="2"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding VersionMaccliente}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="2"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding FechaVersionMaccliente}"
+                                            TextColor="Black">
+                                    </Label>
+
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Version Mpeccliente"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding VersionMpecliente}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding FechaVersionMpecliente}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="4"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Version Garum"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="4"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding VersionGarum}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="4"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding FechaVersionGarum}"
+                                            TextColor="Black">
+                                    </Label>
+
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+

@@ -142,11 +142,11 @@
             Settings.IsRemembered = this.IsRemembered;
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
-            //  mainViewModel.Token = token;
-//            mainViewModel.Macserver = new MacserverViewModel();
-  //          await Application.Current.MainPage.Navigation.PushAsync(new MacserverPage());
-            mainViewModel.Stations = new StationsViewModel();
+
+            mainViewModel.UltimasVersiones = new UltimasVersionesViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
+            //mainViewModel.Stations = new StationsViewModel();
+            //await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;
