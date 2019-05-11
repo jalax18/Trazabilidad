@@ -1,0 +1,74 @@
+﻿@model Trazabilidad.Common.Models.Artdef
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Artdef</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdArticu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdArticu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idgrupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idgrupo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idsubfam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idsubfam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idfam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idfam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEstacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEstacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdArtdef }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

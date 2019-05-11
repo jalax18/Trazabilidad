@@ -31,6 +31,14 @@ namespace Trazabilidad.Domain.Models
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.StationService> StationServices { get; set; }
 
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.UltimasVersiones> UltimasVersiones { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Artdef> Artdefs { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Tandef> Tandefs { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Posdef> Posdefs { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Surdef> Surdefs { get; set; }
     }
 
 }

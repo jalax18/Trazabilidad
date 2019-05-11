@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Trazabilidad.Common.Models.Artdef>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdArticu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idgrupo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idsubfam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idfam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEstacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdArticu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idgrupo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idsubfam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idfam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEstacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdArtdef }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdArtdef }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdArtdef })
+        </td>
+    </tr>
+}
+
+</table>

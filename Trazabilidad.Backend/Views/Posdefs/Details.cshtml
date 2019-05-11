@@ -1,0 +1,42 @@
+﻿@model Trazabilidad.Common.Models.Posdef
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Posdef</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numman)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numman)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEstacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEstacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdPosdef }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

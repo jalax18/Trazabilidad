@@ -174,15 +174,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArtdefsController.cs" />
     <Compile Include="Controllers\GarumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MacclientesController.cs" />
     <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
+    <Compile Include="Controllers\PosdefsController.cs" />
     <Compile Include="Controllers\StationsController.cs" />
     <Compile Include="Controllers\StationServicesController.cs" />
     <Compile Include="Controllers\StationTypesController.cs" />
+    <Compile Include="Controllers\SurdefsController.cs" />
+    <Compile Include="Controllers\TandefsController.cs" />
     <Compile Include="Controllers\UltimasVersionesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\UserTypesController.cs" />
@@ -319,6 +323,26 @@
     <Content Include="Views\UltimasVersiones\Details.cshtml" />
     <Content Include="Views\UltimasVersiones\Edit.cshtml" />
     <Content Include="Views\UltimasVersiones\Index.cshtml" />
+    <Content Include="Views\Artdefs\Create.cshtml" />
+    <Content Include="Views\Artdefs\Delete.cshtml" />
+    <Content Include="Views\Artdefs\Details.cshtml" />
+    <Content Include="Views\Artdefs\Edit.cshtml" />
+    <Content Include="Views\Artdefs\Index.cshtml" />
+    <Content Include="Views\Tandefs\Create.cshtml" />
+    <Content Include="Views\Tandefs\Delete.cshtml" />
+    <Content Include="Views\Tandefs\Details.cshtml" />
+    <Content Include="Views\Tandefs\Edit.cshtml" />
+    <Content Include="Views\Tandefs\Index.cshtml" />
+    <Content Include="Views\Posdefs\Create.cshtml" />
+    <Content Include="Views\Posdefs\Delete.cshtml" />
+    <Content Include="Views\Posdefs\Details.cshtml" />
+    <Content Include="Views\Posdefs\Edit.cshtml" />
+    <Content Include="Views\Posdefs\Index.cshtml" />
+    <Content Include="Views\Surdefs\Create.cshtml" />
+    <Content Include="Views\Surdefs\Delete.cshtml" />
+    <Content Include="Views\Surdefs\Details.cshtml" />
+    <Content Include="Views\Surdefs\Edit.cshtml" />
+    <Content Include="Views\Surdefs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

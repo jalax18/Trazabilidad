@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Trazabilidad.Common.Models.Tandef>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codtan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arttan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstacion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codtan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arttan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdTandef }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdTandef }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdTandef })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
