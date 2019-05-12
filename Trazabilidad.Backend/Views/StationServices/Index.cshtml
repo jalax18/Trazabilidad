@@ -1,97 +1,113 @@
 ﻿@model IEnumerable<Trazabilidad.Common.Models.StationService>
 
 @{
-    ViewBag.Title = "Index";
+    Layout = null;
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NameStation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VersionMacserver)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VersionMaccliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VersionMpecliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VersionXad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VersionGarum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TipoEstacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaEstacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImagePath)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Server)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroTpvs)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NameStation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VersionMacserver)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VersionMaccliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VersionMpecliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VersionXad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VersionGarum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoEstacion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaEstacion)
-        </td>
-        <td>
-            @if (!string.IsNullOrEmpty(item.ImagePath))
-            {
-                <img src="@Url.Content(item.ImagePath)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
-            }
-
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Server)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroTpvs)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StationId })
-        </td>
-    </tr>
-}
-
-</table>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameStation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionMacserver)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionMaccliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionMpecliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionXad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionGarum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Server)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroTpvs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concentrador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gestion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameStation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionMacserver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionMaccliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionMpecliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionXad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersionGarum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Server)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroTpvs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concentrador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gestion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.StationId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.StationId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.StationId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

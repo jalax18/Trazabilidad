@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:i18n="clr-namespace:Trazabilidad.Helpers"
+    x:Class="Trazabilidad.Views.PosicionSuministrosPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    BackgroundColor="White"
+    Title="Configuracion Posiciones de Suministro">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Stations}">
+            <SearchBar
+                BackgroundColor="white"
+                HeightRequest="46"
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="{i18n:Translate Search}"
+                SearchCommand="{Binding SearchCommand}">
+            </SearchBar>
+            <ListView 
+                BackgroundColor="White"
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Stations}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectStationCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image
+                                        Grid.Column="0"
+                                        Source="{Binding ImageFullPath}"
+                                        WidthRequest="100">
+
+                                    </Image>
+
+                                    <StackLayout 
+                                        Grid.Column="1"
+                                        VerticalOptions="Center">
+                                        <Label 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="{Binding NameStation}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding TipoEstacion}"
+                                            TextColor="Black">
+                                        </Label>
+                                    </StackLayout>
+
+                                    <Image 
+                                        Grid.Column="2"
+                                        HorizontalOptions="End" 
+                                        Source="ic_chevron_right">
+                                    </Image>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+

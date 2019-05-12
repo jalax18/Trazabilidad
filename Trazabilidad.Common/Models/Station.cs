@@ -72,6 +72,10 @@ namespace Trazabilidad.Common.Models
 
         public DateTime FechaEstacion { get; set; }
 
+        public String Concentrador { get; set; }
+
+        public string Gestion { get; set; }
+
 
     }
 }

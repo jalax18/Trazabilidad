@@ -20,7 +20,7 @@
         {
          //   MainViewModel.GetInstance().Station = new StationViewModel(this);
             MainViewModel.GetInstance().Station = new StationViewModel(this);
-            await App.Navigator.PushAsync(new StationPage());
+            await App.Navigator.PushAsync(new StationTabbedPage());
         }
         #endregion
 

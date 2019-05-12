@@ -12,7 +12,6 @@ using Trazabilidad.Common.Models;
 
 namespace Trazabilidad.Backend.Controllers
 {
-    using Helpers;
     public class StationServicesController : Controller
     {
         private LocalDataContext db = new LocalDataContext();
@@ -49,45 +48,16 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(StationServiceView view)
+        public async Task<ActionResult> Create([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion")] StationService stationService)
         {
             if (ModelState.IsValid)
             {
-                var pic = string.Empty;
-                var folder = "~/Content/StationPhotos";
-
-                if (view.ImageFile != null)
-                {
-                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
-                    pic = $"{folder}/{pic}";
-                 //   pic = string.Format("{0}/{1}", folder, pic);
-                }
-                var stationService = this.ToStationService(view,pic);
-
                 db.StationServices.Add(stationService);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(view);
-        }
-
-        private StationService ToStationService(StationServiceView view,string pic)
-        {
-            return new StationService {
-                StationId=view.StationId,
-                NameStation=view.NameStation,
-                VersionMacserver=view.VersionMacserver,
-                VersionMaccliente=view.VersionMaccliente,
-                VersionMpecliente=view.VersionMpecliente,
-                VersionXad=view.VersionXad,
-                VersionGarum=view.VersionGarum,
-                TipoEstacion=view.TipoEstacion,
-                FechaEstacion=view.FechaEstacion,
-                Server=view.Server,
-                NumeroTpvs=view.NumeroTpvs,
-                ImagePath=pic,
-            };
+            return View(stationService);
         }
 
         // GET: StationServices/Edit/5
@@ -102,28 +72,7 @@ namespace Trazabilidad.Backend.Controllers
             {
                 return HttpNotFound();
             }
-
-            var view = this.ToView(stationService);
-            return View(view);
-        }
-
-        private StationServiceView ToView(StationService stationService)
-        {
-            return new StationServiceView
-            {
-                StationId = stationService.StationId,
-                NameStation = stationService.NameStation,
-                VersionMacserver = stationService.VersionMacserver,
-                VersionMaccliente = stationService.VersionMaccliente,
-                VersionMpecliente = stationService.VersionMpecliente,
-                VersionXad = stationService.VersionXad,
-                VersionGarum = stationService.VersionGarum,
-                TipoEstacion = stationService.TipoEstacion,
-                FechaEstacion = stationService.FechaEstacion,
-                Server = stationService.Server,
-                NumeroTpvs = stationService.NumeroTpvs,
-                ImagePath = stationService.ImagePath,
-            };
+            return View(stationService);
         }
 
         // POST: StationServices/Edit/5
@@ -131,25 +80,15 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit( StationServiceView view)
+        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion")] StationService stationService)
         {
             if (ModelState.IsValid)
             {
-                var pic = view.ImagePath;
-                var folder = "~/Content/StationPhotos";
-
-                if (view.ImageFile != null)
-                {
-                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
-                    pic = $"{folder}/{pic}";
-                    //   pic = string.Format("{0}/{1}", folder, pic);
-                }
-                var stationService = this.ToStationService(view, pic);
                 db.Entry(stationService).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(view);
+            return View(stationService);
         }
 
         // GET: StationServices/Delete/5

@@ -22,8 +22,8 @@ namespace Trazabilidad.Common.Models
         [Display(Name = "Estacion de Servicio")]
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
+        [MaxLength(250, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
 
         [Index("StationService_NameStation_Index", IsUnique = true)]
 
@@ -33,8 +33,7 @@ namespace Trazabilidad.Common.Models
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
-
+        
         public string VersionMacserver { get; set; }
 
 
@@ -42,21 +41,18 @@ namespace Trazabilidad.Common.Models
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public string VersionMaccliente { get; set; }
 
         [Display(Name = "Version Mpecliente")]
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public string VersionMpecliente { get; set; }
 
         [Display(Name = "Version XAD")]
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public string VersionXad { get; set; }
 
 
@@ -65,7 +61,6 @@ namespace Trazabilidad.Common.Models
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public string VersionGarum { get; set; }
 
 
@@ -73,7 +68,6 @@ namespace Trazabilidad.Common.Models
 
         [Required(ErrorMessage = "The field {0} is requiered.")]
 
-        [MaxLength(50, ErrorMessage = "The field {0} only can contains a maximum of {1} characters lenght.")]
         public String TipoEstacion { get; set; }
 
         [DataType(DataType.Date)]
@@ -89,7 +83,11 @@ namespace Trazabilidad.Common.Models
 
         [Display(Name = "Nº TPVS")]
         [Required(ErrorMessage = "The field {0} is requiered.")]
-        public int  NumeroTpvs { get; set; }
+        public int NumeroTpvs { get; set; }
+
+        public string Concentrador { get; set; }
+
+        public string Gestion { get; set; }
 
         public string ImageFullPath
         {
