@@ -28,6 +28,7 @@ namespace Trazabilidad.API.Controllers
         [ResponseType(typeof(Posdef))]
         public async Task<IHttpActionResult> GetPosdef(int id)
         {
+           // var posdef = await db.Posdefs.Where(p => p.IdEstacion == 161).FirstOrDefaultAsync();
             Posdef posdef = await db.Posdefs.FindAsync(id);
             if (posdef == null)
             {
