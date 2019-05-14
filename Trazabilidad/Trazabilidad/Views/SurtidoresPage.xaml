@@ -9,7 +9,7 @@
     x:Class="Trazabilidad.Views.SurtidoresPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     BackgroundColor="White"
-    Title="Configuracion de Surtidores">
+    Title="Configuracion de Mangueras">
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Stations}">
@@ -25,7 +25,7 @@
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
-                ItemsSource="{Binding Stations}"
+                ItemsSource="{Binding Surdef}"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding RefreshCommand}">
                 <ListView.ItemTemplate>
@@ -41,38 +41,80 @@
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="6*"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+
+
                                     </Grid.ColumnDefinitions>
-                                    <Image
-                                        Grid.Column="0"
-                                        Source="{Binding ImageFullPath}"
-                                        WidthRequest="100">
-
-                                    </Image>
-
-                                    <StackLayout 
-                                        Grid.Column="1"
-                                        VerticalOptions="Center">
-                                        <Label 
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                            Text="{Binding NameStation}"
+                                            Text="Surtidor"
                                             TextColor="Black">
-                                        </Label>
-                                        <Label 
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                             Text="{Binding TipoEstacion}"
+                                            Text="Manguera"
                                             TextColor="Black">
-                                        </Label>
-                                    </StackLayout>
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Tanque/Aspiracion"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="3"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Producto"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Possur}"
+                                            TextColor="Black">
+                                    </Label>
 
-                                    <Image 
-                                        Grid.Column="2"
-                                        HorizontalOptions="End" 
-                                        Source="ic_chevron_right">
-                                    </Image>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Manguera}"
+                                            TextColor="Black">
+                                    </Label>
+
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Codsur}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="3"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Desart}"
+                                            TextColor="Black">
+                                    </Label>
+
+                                   
                                 </Grid>
                             </Frame>
                         </ViewCell>

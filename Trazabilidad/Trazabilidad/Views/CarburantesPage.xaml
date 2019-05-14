@@ -25,7 +25,7 @@
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
-                ItemsSource="{Binding Stations}"
+                ItemsSource="{Binding Artdef}"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding RefreshCommand}">
                 <ListView.ItemTemplate>
@@ -41,38 +41,110 @@
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="3*"/>
                                         <ColumnDefinition Width="*"/>
+                                       
+                                       
                                     </Grid.ColumnDefinitions>
-                                    <Image
-                                        Grid.Column="0"
-                                        Source="{Binding ImageFullPath}"
-                                        WidthRequest="100">
-
-                                    </Image>
-
-                                    <StackLayout 
-                                        Grid.Column="1"
-                                        VerticalOptions="Center">
-                                        <Label 
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                            Text="{Binding NameStation}"
+                                            Text="Codigo"
                                             TextColor="Black">
-                                        </Label>
-                                        <Label 
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                             Text="{Binding TipoEstacion}"
+                                            Text="Descripcion"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Id Articulo"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Id Grupo"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Id Familia"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Id Sub familia"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Codart}"
                                             TextColor="Black">
                                         </Label>
-                                    </StackLayout>
+                                       
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Desart}"
+                                            TextColor="Black">
+                                        </Label>
 
-                                    <Image 
-                                        Grid.Column="2"
-                                        HorizontalOptions="End" 
-                                        Source="ic_chevron_right">
-                                    </Image>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding IdArticu}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="4" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Idgrupo}"
+                                            TextColor="Black">
+                                    </Label>
+
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="4" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Idfam}"
+                                            TextColor="Black">
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="2"
+                                            Grid.Row="4" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Idsubfam}"
+                                            TextColor="Black">
+                                    </Label>
                                 </Grid>
                             </Frame>
                         </ViewCell>

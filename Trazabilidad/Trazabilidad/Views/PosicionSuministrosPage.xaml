@@ -25,7 +25,7 @@
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
-                ItemsSource="{Binding Stations}"
+                ItemsSource="{Binding Posdef}"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding RefreshCommand}">
                 <ListView.ItemTemplate>
@@ -41,38 +41,47 @@
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="6*"/>
                                         <ColumnDefinition Width="*"/>
+                                      
+
+
                                     </Grid.ColumnDefinitions>
-                                    <Image
-                                        Grid.Column="0"
-                                        Source="{Binding ImageFullPath}"
-                                        WidthRequest="100">
-
-                                    </Image>
-
-                                    <StackLayout 
-                                        Grid.Column="1"
-                                        VerticalOptions="Center">
-                                        <Label 
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                            Text="{Binding NameStation}"
+                                            Text="Posicion"
                                             TextColor="Black">
-                                        </Label>
-                                        <Label 
+                                    </Label>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="0"
                                             FontAttributes="None"
                                             FontSize="Default" 
-                                             Text="{Binding TipoEstacion}"
+                                            Text="Numero de Mangueras"
                                             TextColor="Black">
-                                        </Label>
-                                    </StackLayout>
+                                    </Label>
+                                 
+                                    <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Posicion}"
+                                            TextColor="Black">
+                                    </Label>
 
-                                    <Image 
-                                        Grid.Column="2"
-                                        HorizontalOptions="End" 
-                                        Source="ic_chevron_right">
-                                    </Image>
+                                    <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Numman}"
+                                            TextColor="Black">
+                                    </Label>
+
+
                                 </Grid>
                             </Frame>
                         </ViewCell>

@@ -10,11 +10,36 @@
 
         #region Properties
 
+        public List<Artdef> ArtdefList
+        {
+            get;
+            set;
+        }
+
+        public List<Tandef> TandefList
+        {
+            get;
+            set;
+        }
+
+        public List<Posdef> PosdefList
+        {
+            get;
+            set;
+        }
+
+        public List<Surdef> SurdefList
+        {
+            get;
+            set;
+        }
         public List<Station> StationList
         {
             get;
             set;
         }
+
+
         public ObservableCollection<MenuItemViewModel> Menus
         {
             get;
