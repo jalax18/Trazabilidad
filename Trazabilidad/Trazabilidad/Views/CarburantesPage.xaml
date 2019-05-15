@@ -12,7 +12,7 @@
     Title="Configuracion Carburantes">
     <ContentPage.Content>
         <StackLayout
-            BindingContext="{Binding Stations}">
+            BindingContext="{Binding Station}">
             <SearchBar
                 BackgroundColor="white"
                 HeightRequest="46"
