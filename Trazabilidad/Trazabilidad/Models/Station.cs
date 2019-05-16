@@ -28,7 +28,7 @@ namespace Trazabilidad.Models
             }
                 }
         public bool Server { get; set; }
-            public int NumeroTpvs { get; set; }
+        public int NumeroTpvs { get; set; }
         public string Concentrador { get; set; }
 
         public string Gestion { get; set; }

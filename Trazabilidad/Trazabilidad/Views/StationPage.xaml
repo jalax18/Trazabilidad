@@ -47,20 +47,20 @@
                         Grid.Column="1"
                         Grid.Row="1"
                         FontAttributes="Bold"
-                        Text="{Binding Station.Concentrador}"
+                        Text="{Binding Station.Gestion}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
                         Grid.Row="2"
-                        Text="Version XAD"
+                        Text="Concentrador "
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
                         Grid.Row="2"
                         FontAttributes="Bold"
-                        Text="{Binding Station.VersionXad}"
+                        Text="{Binding Station.Concentrador}"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -92,53 +92,53 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="5"
-                        Text="Version Macserver"
+                        Text="Version XAD"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
                         Grid.Row="5"
                         FontAttributes="Bold"
-                        Text="{Binding Station.VersionMacserver}"
+                        Text="{Binding Station.VersionXad}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
                         Grid.Row="6"
-                        Text="Versión Maccliente"
+                        Text="Version Macserver"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
                         Grid.Row="6"
+                        FontAttributes="Bold"
+                        Text="{Binding Station.VersionMacserver}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="Versión Maccliente"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
                         FontAttributes="Bold"
                         Text="{Binding Station.VersionMaccliente}"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="7"
+                        Grid.Row="8"
                         Text="Versión Mpecliente"
                         TextColor="Black">
                     </Label>
                     <Label
                         Grid.Column="1"
-                        Grid.Row="7"
+                        Grid.Row="8"
                         FontAttributes="Bold"
                         Text="{Binding Station.VersionMpecliente}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="8"
-                        Text="Version Garum"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="8"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionGarum}"
                         TextColor="Black">
                     </Label>
                     <Label
