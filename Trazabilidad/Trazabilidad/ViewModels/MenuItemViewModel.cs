@@ -50,6 +50,14 @@
                 MainViewModel.GetInstance().UltimasVersiones = new UltimasVersionesViewModel();
                 App.Navigator.PushAsync(new UltimasVersionesPage());
             }
+
+            else if (this.PageName == "AcercadePage")
+            {
+
+
+                MainViewModel.GetInstance().Acercade = new AcercadeViewModel();
+                App.Navigator.PushAsync(new AcercadePage());
+            }
         }
         #endregion
     }

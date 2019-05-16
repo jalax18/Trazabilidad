@@ -61,6 +61,7 @@
         #endregion*/
 
         #region ViewModels
+        public AcercadeViewModel Acercade { get; set; }
         public UltimasVersionesViewModel UltimasVersiones
         {
             get;
@@ -123,14 +124,14 @@
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
-                PageName = "LastVersion",
-                Title = "Programador Estaciones",
+                PageName = "ProgramadordetareasPage",
+                Title = "Programador Tareas",
 
             });
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
-                PageName = "LastVersion",
+                PageName = "AcercadePage",
                 Title = "Acerca de",
 
             });
