@@ -15,8 +15,8 @@ namespace Trazabilidad.Models
             public string VersionGarum { get; set; }
             public string TipoEstacion { get; set; }
             public DateTime FechaEstacion { get; set; }
-        public string ImagePath { get; set; }
-        public string ImageFullPath
+            public string ImagePath { get; set; }
+            public string ImageFullPath
         {
             get
             {
@@ -29,7 +29,9 @@ namespace Trazabilidad.Models
                 }
         public bool Server { get; set; }
             public int NumeroTpvs { get; set; }
-        
+        public string Concentrador { get; set; }
+
+        public string Gestion { get; set; }
 
     }
 }

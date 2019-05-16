@@ -234,7 +234,9 @@
         {
             return MainViewModel.GetInstance().StationList.Select(l => new StationItemViewModel
             {
-                StationId=l.StationId,
+                Gestion = l.Gestion,
+                Concentrador=l.Concentrador,
+                StationId = l.StationId,
                 NameStation = l.NameStation,
                 VersionMacserver = l.VersionMacserver,
                 VersionMaccliente = l.VersionMaccliente,

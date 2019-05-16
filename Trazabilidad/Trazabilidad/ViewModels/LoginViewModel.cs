@@ -148,7 +148,7 @@
            // App.Master.IsPresented = false;
             mainViewModel.Stations = new StationsViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
-
+          //  await App.Navigator.PushAsync(new MasterPage());
             this.IsRunning = false;
             this.IsEnabled = true;
 

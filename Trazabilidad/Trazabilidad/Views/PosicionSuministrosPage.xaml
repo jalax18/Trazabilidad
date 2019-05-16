@@ -9,17 +9,18 @@
     x:Class="Trazabilidad.Views.PosicionSuministrosPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     BackgroundColor="White"
-    Title="Configuracion Posiciones de Suministro">
+    Title="Surtidores">
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Station}">
-            <SearchBar
-                BackgroundColor="white"
-                HeightRequest="46"
-                Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="{i18n:Translate Search}"
-                SearchCommand="{Binding SearchCommand}">
-            </SearchBar>
+            <Label
+                    FontSize="Default"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Station.NameStation}"
+                    TextColor="Black">
+            </Label>
+
             <ListView 
                 BackgroundColor="White"
                 HasUnevenRows="true" 
@@ -35,9 +36,7 @@
                                 CornerRadius="20"
                                 HasShadow="true"
                                 Margin="5">
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SelectStationCommand}"/>
-                                </Frame.GestureRecognizers>
+                               
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
