@@ -10,7 +10,10 @@
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding UltimasVersiones}">
-          
+            <Image
+                    Source="Logo4GL1"
+                    WidthRequest="200">
+            </Image>
             <ListView 
                 BackgroundColor="White"
                 HasUnevenRows="true" 

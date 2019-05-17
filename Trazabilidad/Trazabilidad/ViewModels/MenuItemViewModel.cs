@@ -58,6 +58,13 @@
                 MainViewModel.GetInstance().Acercade = new AcercadeViewModel();
                 App.Navigator.PushAsync(new AcercadePage());
             }
+            else if (this.PageName == "ProgramadordeTareasPage")
+            {
+
+
+                MainViewModel.GetInstance().ProgramadordeTareas = new ProgramadordeTareasViewModel();
+                App.Navigator.PushAsync(new ProgramadordeTareasPage());
+            }
         }
         #endregion
     }

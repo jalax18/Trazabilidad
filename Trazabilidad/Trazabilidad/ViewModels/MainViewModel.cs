@@ -61,7 +61,12 @@
         #endregion*/
 
         #region ViewModels
+
+        
+
+        public ProgramadordeTareasViewModel ProgramadordeTareas { get; set; }
         public AcercadeViewModel Acercade { get; set; }
+
         public UltimasVersionesViewModel UltimasVersiones
         {
             get;
@@ -124,7 +129,7 @@
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
-                PageName = "ProgramadordetareasPage",
+                PageName = "ProgramadordeTareasPage",
                 Title = "Programador Tareas",
 
             });
