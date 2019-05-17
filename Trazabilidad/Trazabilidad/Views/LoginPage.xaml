@@ -11,11 +11,12 @@
 
 
         <ScrollView
+            BackgroundColor="White"
             BindingContext="{Binding Login}">
             <StackLayout
                 Padding="5">
                 <Image
-                    Source="Logo4GL"
+                    Source="Logo4GL1"
                     WidthRequest="200">
                 </Image>
                 <Grid

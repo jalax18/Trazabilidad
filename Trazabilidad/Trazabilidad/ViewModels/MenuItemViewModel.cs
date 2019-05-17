@@ -65,6 +65,14 @@
                 MainViewModel.GetInstance().ProgramadordeTareas = new ProgramadordeTareasViewModel();
                 App.Navigator.PushAsync(new ProgramadordeTareasPage());
             }
+
+            else if (this.PageName == "PruebaFotoPage")
+            {
+
+
+                MainViewModel.GetInstance().PruebaFoto = new PruebaFotoViewModel();
+                App.Navigator.PushAsync(new PruebaFotoPage());
+            }
         }
         #endregion
     }

@@ -66,7 +66,7 @@
 
         public ProgramadordeTareasViewModel ProgramadordeTareas { get; set; }
         public AcercadeViewModel Acercade { get; set; }
-
+        public PruebaFotoViewModel PruebaFoto { get; set; }
         public UltimasVersionesViewModel UltimasVersiones
         {
             get;
@@ -149,6 +149,13 @@
 
             });
 
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_insert_chart",
+                PageName = "PruebaFotoPage",
+                Title = "Test",
+
+            });
         }
         #endregion
 
