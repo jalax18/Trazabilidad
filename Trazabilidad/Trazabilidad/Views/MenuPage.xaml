@@ -13,8 +13,8 @@
         <StackLayout
             Padding="5,20,5,5">
             <controls:CircleImage 
-                    Aspect="AspectFill"
-                    Source="Logo4GL1">
+                    Aspect="AspectFit"
+                    Source="photo">
                 
             </controls:CircleImage>
             
