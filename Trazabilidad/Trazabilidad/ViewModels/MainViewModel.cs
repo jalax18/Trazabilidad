@@ -149,13 +149,13 @@
 
             });
 
-            this.Menus.Add(new MenuItemViewModel
+        /*    this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
                 PageName = "PruebaFotoPage",
                 Title = "Test",
 
-            });
+            });*/
         }
         #endregion
 

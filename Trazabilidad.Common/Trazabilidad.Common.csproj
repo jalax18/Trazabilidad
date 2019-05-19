@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Models\Posdef.cs" />
     <Compile Include="Models\Surdef.cs" />
+    <Compile Include="Models\Macserverdef.cs" />
     <Compile Include="Models\Tandef.cs" />
     <Compile Include="Models\Artdef.cs" />
     <Compile Include="Models\Garum.cs" />

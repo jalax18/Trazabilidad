@@ -14,7 +14,8 @@
             Padding="5,20,5,5">
             <controls:CircleImage 
                     Aspect="AspectFit"
-                    Source="photo">
+                    Source="photo"
+                WidthRequest="100">
                 
             </controls:CircleImage>
             
