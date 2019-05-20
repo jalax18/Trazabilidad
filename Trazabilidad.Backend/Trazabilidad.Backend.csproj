@@ -178,6 +178,7 @@
     <Compile Include="Controllers\GarumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MacclientesController.cs" />
+    <Compile Include="Controllers\MacserverdefsController.cs" />
     <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
@@ -343,6 +344,11 @@
     <Content Include="Views\Surdefs\Details.cshtml" />
     <Content Include="Views\Surdefs\Edit.cshtml" />
     <Content Include="Views\Surdefs\Index.cshtml" />
+    <Content Include="Views\Macserverdefs\Create.cshtml" />
+    <Content Include="Views\Macserverdefs\Delete.cshtml" />
+    <Content Include="Views\Macserverdefs\Details.cshtml" />
+    <Content Include="Views\Macserverdefs\Edit.cshtml" />
+    <Content Include="Views\Macserverdefs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

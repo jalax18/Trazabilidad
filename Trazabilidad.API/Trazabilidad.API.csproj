@@ -216,6 +216,7 @@
     <Compile Include="Controllers\GarumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MacclientesController.cs" />
+    <Compile Include="Controllers\MacserverdefsController.cs" />
     <Compile Include="Controllers\MacserversController.cs" />
     <Compile Include="Controllers\MpeclientesController.cs" />
     <Compile Include="Controllers\PosdefsController.cs" />
