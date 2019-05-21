@@ -1,0 +1,173 @@
+﻿@model IEnumerable<Trazabilidad.Common.Models.Fpardia>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fptipest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpdir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fptel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcab1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcab2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcab3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcab4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcab5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppie1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppie2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppie3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpcabfac7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppiefac1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppiefac2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fppiefac3)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fptipest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpemp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpdir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fptel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcab1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcab2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcab3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcab4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcab5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppie1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppie2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppie3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpcabfac7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppiefac1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppiefac2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fppiefac3)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdFpardia }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdFpardia }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdFpardia })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

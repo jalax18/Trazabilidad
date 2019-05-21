@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Fpardia.cs" />
     <Compile Include="Models\Posdef.cs" />
     <Compile Include="Models\Surdef.cs" />
     <Compile Include="Models\Macserverdef.cs" />

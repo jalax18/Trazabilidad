@@ -175,6 +175,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtdefsController.cs" />
+    <Compile Include="Controllers\FpardiasController.cs" />
     <Compile Include="Controllers\GarumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MacclientesController.cs" />
@@ -349,6 +350,11 @@
     <Content Include="Views\Macserverdefs\Details.cshtml" />
     <Content Include="Views\Macserverdefs\Edit.cshtml" />
     <Content Include="Views\Macserverdefs\Index.cshtml" />
+    <Content Include="Views\Fpardias\Create.cshtml" />
+    <Content Include="Views\Fpardias\Delete.cshtml" />
+    <Content Include="Views\Fpardias\Details.cshtml" />
+    <Content Include="Views\Fpardias\Edit.cshtml" />
+    <Content Include="Views\Fpardias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

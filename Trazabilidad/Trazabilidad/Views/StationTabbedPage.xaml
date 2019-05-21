@@ -12,5 +12,6 @@
         <tabs:TanquesPage/>
         <tabs:PosicionSuministrosPage/>
         <tabs:SurtidoresPage/>
+        <tabs:MacserverIniPage/>
     </TabbedPage.Children>
 </TabbedPage>

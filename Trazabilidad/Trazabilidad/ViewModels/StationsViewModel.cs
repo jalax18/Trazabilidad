@@ -21,6 +21,7 @@
 
         #region Attributes
         private ObservableCollection<StationItemViewModel> stations;
+        private ObservableCollection<Macserverdef> macserverdef;
         private ObservableCollection<Artdef> artdef;
         private ObservableCollection<Tandef> tandef;
         private ObservableCollection<Posdef> posdef;
@@ -31,6 +32,11 @@
         #endregion
 
         #region Properties
+        public ObservableCollection<Macserverdef> Macserverdef
+        {
+            get { return this.macserverdef; }
+            set { SetValue(ref this.macserverdef, value); }
+        }
         public ObservableCollection<StationItemViewModel> Stations
         {
             get { return this.stations; }
@@ -222,8 +228,30 @@
             MainViewModel.GetInstance().SurdefList = (List<Surdef>)responsesurdef.Result;
             //  this.StationsList = (List<Station>)response.Result;
             this.Surdef = new ObservableCollection<Surdef>(MainViewModel.GetInstance().SurdefList);
-            this.IsRefreshing = false;
+           // this.IsRefreshing = false;
 
+            //// metemos la carga de Macserverdef del webservice
+
+            var responsemacserverdef = await this.apiService.GetList<Macserverdef>(
+                "http://2.139.147.209:1601",
+                "/api",
+                "/Macserverdefs");
+
+            if (!responsesurdef.IsSuccess)
+            {
+                this.IsRefreshing = false;
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error,
+                    response.Message,
+                    Languages.Accept);
+                await Application.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
+
+            MainViewModel.GetInstance().MacserverdefList = (List<Macserverdef>)responsemacserverdef.Result;
+            //  this.StationsList = (List<Station>)response.Result;
+            this.Macserverdef = new ObservableCollection<Macserverdef>(MainViewModel.GetInstance().MacserverdefList);
+            this.IsRefreshing = false;
 
         }
         #endregion

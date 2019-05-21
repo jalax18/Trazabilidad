@@ -10,6 +10,12 @@
 
         #region Properties
 
+        public List<Macserverdef> MacserverdefList
+        {
+            get;
+            set;
+        }
+
         public List<Artdef> ArtdefList
         {
             get;
@@ -67,6 +73,12 @@
         public ProgramadordeTareasViewModel ProgramadordeTareas { get; set; }
         public AcercadeViewModel Acercade { get; set; }
         public PruebaFotoViewModel PruebaFoto { get; set; }
+
+        public MacserverIniViewModel Macserverini
+        {
+            get;
+            set;
+        }
         public UltimasVersionesViewModel UltimasVersiones
         {
             get;

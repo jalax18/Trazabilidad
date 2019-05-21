@@ -41,6 +41,8 @@ namespace Trazabilidad.Domain.Models
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Surdef> Surdefs { get; set; }
 
         public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Macserverdef> Macserverdefs { get; set; }
+
+        public System.Data.Entity.DbSet<Trazabilidad.Common.Models.Fpardia> Fpardias { get; set; }
     }
 
 }

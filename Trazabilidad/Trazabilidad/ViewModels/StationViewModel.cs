@@ -18,6 +18,12 @@ namespace Trazabilidad.ViewModels
             set;
         }
 
+        public ObservableCollection<Macserverdef> Macserverdef
+        {
+            get;
+            set;
+        }
+
         public ObservableCollection<Artdef> Artdef
         {
             get;
@@ -45,6 +51,10 @@ namespace Trazabilidad.ViewModels
         public StationViewModel(Station Station)
         {
             this.Station = Station;
+            Macserverdef = new ObservableCollection<Macserverdef>(
+                     MainViewModel.GetInstance().MacserverdefList.Where(
+                         a => a.IdEstacion == Station.StationId));
+
             Artdef = new ObservableCollection<Artdef>(
                      MainViewModel.GetInstance().ArtdefList.Where(
                          a => a.IdEstacion == Station.StationId));
