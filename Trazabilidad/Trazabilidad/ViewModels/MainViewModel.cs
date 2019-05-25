@@ -10,6 +10,12 @@
 
         #region Properties
 
+        public List<Fpardia> FpardiaList
+        {
+            get;
+            set;
+        }
+
         public List<Macserverdef> MacserverdefList
         {
             get;
@@ -68,8 +74,9 @@
 
         #region ViewModels
 
-        
 
+        public MapsViewModel Maps { get; set; }
+        public MasinfoViewModel Masinfo { get; set; }
         public ProgramadordeTareasViewModel ProgramadordeTareas { get; set; }
         public AcercadeViewModel Acercade { get; set; }
         public PruebaFotoViewModel PruebaFoto { get; set; }
@@ -136,6 +143,12 @@
                 Icon = "ic_settings",
                 PageName="UltimasVersionesPage",
                 Title="Ver Ultimas Versiones",
+
+            }); this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_settings",
+                PageName = "MapsPage",
+                Title = "Acceso Mapa Estaciones",
 
             });
             this.Menus.Add(new MenuItemViewModel

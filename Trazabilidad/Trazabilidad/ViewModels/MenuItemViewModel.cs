@@ -73,6 +73,14 @@
                 MainViewModel.GetInstance().PruebaFoto = new PruebaFotoViewModel();
                 App.Navigator.PushAsync(new PruebaFotoPage());
             }
+            else if (this.PageName == "MapsPage")
+            {
+
+
+                MainViewModel.GetInstance().Maps = new MapsViewModel();
+                App.Navigator.PushAsync(new MapsPage());
+            }
+
         }
         #endregion
     }

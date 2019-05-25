@@ -8,6 +8,7 @@ namespace Trazabilidad.Models
     {
         public int IdFpardia { get; set; }
 
+        
         public int IdEstacion { get; set; }
         public string Fptipest { get; set; }
         // M Comisionista E Firme

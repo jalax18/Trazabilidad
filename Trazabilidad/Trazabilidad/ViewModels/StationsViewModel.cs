@@ -21,6 +21,7 @@
 
         #region Attributes
         private ObservableCollection<StationItemViewModel> stations;
+        private ObservableCollection<Fpardia> fpardia;
         private ObservableCollection<Macserverdef> macserverdef;
         private ObservableCollection<Artdef> artdef;
         private ObservableCollection<Tandef> tandef;
@@ -32,6 +33,12 @@
         #endregion
 
         #region Properties
+        public ObservableCollection<Fpardia> Fpardia
+        {
+            get { return this.fpardia; }
+            set { SetValue(ref this.fpardia, value); }
+        }
+
         public ObservableCollection<Macserverdef> Macserverdef
         {
             get { return this.macserverdef; }
@@ -251,7 +258,33 @@
             MainViewModel.GetInstance().MacserverdefList = (List<Macserverdef>)responsemacserverdef.Result;
             //  this.StationsList = (List<Station>)response.Result;
             this.Macserverdef = new ObservableCollection<Macserverdef>(MainViewModel.GetInstance().MacserverdefList);
+            //this.IsRefreshing = false;
+
+            //// metemos la carga de Fpardia del webservice
+
+            var responsefpardia = await this.apiService.GetList<Fpardia>(
+                "http://2.139.147.209:1601",
+                "/api",
+                "/fpardias");
+
+            if (!responsesurdef.IsSuccess)
+            {
+                this.IsRefreshing = false;
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error,
+                    response.Message,
+                    Languages.Accept);
+                await Application.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
+
+            MainViewModel.GetInstance().FpardiaList = (List<Fpardia>)responsefpardia.Result;
+            //  this.StationsList = (List<Station>)response.Result;
+            this.Fpardia = new ObservableCollection<Fpardia>(MainViewModel.GetInstance().FpardiaList);
             this.IsRefreshing = false;
+
+
+
 
         }
         #endregion

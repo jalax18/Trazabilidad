@@ -1,4 +1,6 @@
-﻿using System;
+﻿//await Application.Current.MainPage.Navigation.PopAsync();
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,14 +11,24 @@ namespace Trazabilidad.ViewModels
     using Xamarin.Forms;
     using ViewModels;
     using System.Collections.ObjectModel;
-
+    using System.Windows.Input;
+    using GalaSoft.MvvmLight.Command;
+    using Views;
     public class StationViewModel
     {
+        #region Properties
         public Station Station
         {
             get;
             set;
         }
+
+        public ObservableCollection<Fpardia> Fpardia
+        {
+            get;
+            set;
+        }
+
 
         public ObservableCollection<Macserverdef> Macserverdef
         {
@@ -48,9 +60,49 @@ namespace Trazabilidad.ViewModels
             set;
         }
 
+        #endregion
+
+        #region Command
+        public ICommand ReturnCommand
+        {
+            get
+            {
+                return new RelayCommand(Return);
+            }
+        }
+
+        public ICommand MasInfoCommand
+        {
+            get
+            {
+                return new RelayCommand(MasInfo);
+            }
+        }
+
+
+
+        #endregion
+
+        #region Methods
+        private async void  Return()
+        {
+            await App.Navigator.PopAsync();
+        }
+
+        private async void MasInfo()
+        {
+            await App.Navigator.PushAsync(new MasinfoPage());
+        }
+        #endregion
+
         public StationViewModel(Station Station)
         {
             this.Station = Station;
+
+            Fpardia = new ObservableCollection<Fpardia>(
+                    MainViewModel.GetInstance().FpardiaList.Where(
+                        a => a.IdEstacion == Station.StationId));
+
             Macserverdef = new ObservableCollection<Macserverdef>(
                      MainViewModel.GetInstance().MacserverdefList.Where(
                          a => a.IdEstacion == Station.StationId));

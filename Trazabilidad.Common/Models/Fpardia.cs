@@ -23,7 +23,7 @@ namespace Trazabilidad.Common.Models
         [Key]
 
         public int IdFpardia { get; set; }
-
+        [Index("Fpardia_IdEstacion_Index", IsUnique = true)]
         public int IdEstacion { get; set; }
         public string Fptipest { get; set; }
         // M Comisionista E Firme
