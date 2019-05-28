@@ -48,7 +48,7 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion")] StationService stationService)
+        public async Task<ActionResult> Create([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion,Latitud,Longitud")] StationService stationService)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace Trazabilidad.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion")] StationService stationService)
+        public async Task<ActionResult> Edit([Bind(Include = "StationId,NameStation,VersionMacserver,VersionMaccliente,VersionMpecliente,VersionXad,VersionGarum,TipoEstacion,FechaEstacion,ImagePath,Server,NumeroTpvs,Concentrador,Gestion,Latitud,Longitud")] StationService stationService)
         {
             if (ModelState.IsValid)
             {

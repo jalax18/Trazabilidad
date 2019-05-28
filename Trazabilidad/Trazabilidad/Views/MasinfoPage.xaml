@@ -11,153 +11,332 @@
             <StackLayout
                 Padding="30">
 
-                <Label
-                    FontSize="Default"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"
-                    Text="{Binding Station.NameStation}"
-                    TextColor="Black">
-                </Label>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        Text="Tipo de Sistema"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        FontAttributes="Bold"
-                        Text="{Binding Fpardia.Fpemp}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Text="Gestion"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.Gestion}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Text="Concentrador "
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.Concentrador}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Text="Servidor"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="3"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.Server}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="4"
-                        Text="Nº de Tpvs"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="4"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.NumeroTpvs}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="5"
-                        Text="Version XAD"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="5"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionXad}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="6"
-                        Text="Version Macserver"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="6"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionMacserver}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="7"
-                        Text="Versión Maccliente"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="7"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionMaccliente}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="8"
-                        Text="Versión Mpecliente"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="8"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.VersionMpecliente}"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="9"
-                        Text="Fecha Ultima Actualización"
-                        TextColor="Black">
-                    </Label>
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="9"
-                        FontAttributes="Bold"
-                        Text="{Binding Station.FechaEstacion}"
-                        TextColor="Black">
-                    </Label>
+                <ListView 
+                BackgroundColor="White"
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Fpardia}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="4*"/>
+                                          
 
 
-                </Grid>
+                                        </Grid.ColumnDefinitions>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpcab1"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="1"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpcab2"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="2"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpcab3"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="3"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpcab4"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="4"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpcab5"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="6"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fppie1"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="7"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fppie2"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="8"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fppie3"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="10"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac1"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="11"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac2"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="12"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac3"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="13"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac4"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="14"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac5"
+                                            TextColor="Black">
+                                        </Label>
 
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="15"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac6"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="16"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfac7"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="18"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfacpie1"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="19"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfacpie2"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="0"
+                                            Grid.Row="20"
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                            Text="Fpfacpie3"
+                                            TextColor="Black">
+                                        </Label>
+                                        
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="0" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcab1}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="1" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcab2}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="2" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcab3}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="3" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcab4}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="4" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcab5}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="6" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppie1}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="7" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppie2}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="8" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppie3}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="10" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac1}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="11" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac2}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="12" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac3}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="13" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac4}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="14" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac5}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="15" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac6}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="16" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fpcabfac7}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="18" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppiefac1}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="19" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppiefac2}"
+                                            TextColor="Black">
+                                        </Label>
+
+                                        <Label 
+                                            Grid.Column="1"
+                                            Grid.Row="20" 
+                                            FontAttributes="None"
+                                            FontSize="Default" 
+                                             Text="{Binding Fppiefac3}"
+                                            TextColor="Black">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
 
             </StackLayout>

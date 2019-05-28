@@ -176,10 +176,10 @@
                         BackgroundColor="CadetBlue"
                         BorderRadius="23"
                         HeightRequest="46"
-                        Command="{Binding ReturnCommand}"
+                        Command="{Binding VerenmapaCommand}"
                         HorizontalOptions="FillAndExpand"
                         IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
-                        Text="Retorno"
+                        Text="Ver en Mapa"
                         TextColor="White">
                     </Button>
                 </StackLayout>

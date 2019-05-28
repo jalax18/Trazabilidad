@@ -63,11 +63,11 @@ namespace Trazabilidad.ViewModels
         #endregion
 
         #region Command
-        public ICommand ReturnCommand
+        public ICommand VerenmapaCommand
         {
             get
             {
-                return new RelayCommand(Return);
+                return new RelayCommand(Verenmapa);
             }
         }
 
@@ -84,9 +84,12 @@ namespace Trazabilidad.ViewModels
         #endregion
 
         #region Methods
-        private async void  Return()
+        private async void  Verenmapa()
         {
-            await App.Navigator.PopAsync();
+
+            MainViewModel.GetInstance().Maps = new MapsViewModel();
+            await App.Navigator.PushAsync(new MapsPage());
+            // await App.Navigator.PopAsync();
         }
 
         private async void MasInfo()
