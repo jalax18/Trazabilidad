@@ -51,7 +51,7 @@ namespace Trazabilidad.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-
+                Xamarin.FormsMaps.Init("AIzaSyC5TtPIOrhf16DN8tXhgDtXzdaHmfPIdJM");
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

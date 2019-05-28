@@ -143,12 +143,11 @@
             // prueba github by ibz
             var mainViewModel = MainViewModel.GetInstance();
 
-            //  mainViewModel.UltimasVersiones = new UltimasVersionesViewModel();
-            //  await Application.Current.MainPage.Navigation.PushAsync((new UltimasVersionesPage()));
-           // App.Master.IsPresented = false;
+  //          mainViewModel.Cardefgrid = new CarbdefgridPageViewModel();
+    //        await Application.Current.MainPage.Navigation.PushAsync(new CarbdefgridPage());
+
             mainViewModel.Stations = new StationsViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
-          //  await App.Navigator.PushAsync(new MasterPage());
             this.IsRunning = false;
             this.IsEnabled = true;
 

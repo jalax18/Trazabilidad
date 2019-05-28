@@ -4,12 +4,14 @@
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using Models;
+    using Xamarin.Forms.Maps;
 
     public class MainViewModel
     {
 
         #region Properties
 
+        public ObservableCollection<Pin> Pins { get; set; }
         public List<Fpardia> FpardiaList
         {
             get;
@@ -74,7 +76,7 @@
 
         #region ViewModels
 
-
+        public CarbdefgridPageViewModel Cardefgrid { get; set; }
         public MapsViewModel Maps { get; set; }
         public MasinfoViewModel Masinfo { get; set; }
         public ProgramadordeTareasViewModel ProgramadordeTareas { get; set; }
@@ -130,6 +132,7 @@
         #region Constructors
         public MainViewModel()
         {
+            Pins = new ObservableCollection<Pin>();
             instance = this;
             this.Login = new LoginViewModel();
             this.LoadMenu();
@@ -148,7 +151,7 @@
             {
                 Icon = "ic_settings",
                 PageName = "MapsPage",
-                Title = "Acceso Mapa Estaciones",
+                Title = "Mapa de EESS Cercanas",
 
             });
             this.Menus.Add(new MenuItemViewModel
@@ -183,7 +186,42 @@
             });*/
         }
         #endregion
+        #region Methods
+        public void GetGeolotation()
+        {
+            var position1 = new Position(37.998161, -1.139048);
+            var pin1 = new Pin
+            {
+                Type = PinType.Place,
+                Position = position1,
+                Label = "Gasolinera Avda Los Pinos",
+                Address = "direccion Avda Los Pinos"
+            };
+            Pins.Add(pin1);
 
+            var position2 = new Position(37.997018, -1.103357);
+            var pin2 = new Pin
+            {
+                Type = PinType.Place,
+                Position = position2,
+                Label = "E.S. RIZAO",
+                Address = "Direccion Rizao"
+            };
+            Pins.Add(pin2);
+
+            var position3 = new Position(38.020400, -1.163618);
+            var pin3 = new Pin
+            {
+                Type = PinType.Place,
+                Position = position3,
+                Label = "E.S. PETROPAY",
+                Address = "Direccion PetroPay"
+            };
+            Pins.Add(pin3);
+        }
+
+
+        #endregion
         #region Singleton
         private static MainViewModel instance;
 

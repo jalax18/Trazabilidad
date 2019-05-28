@@ -2,14 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Trazabilidad.Views.MapsPage"
+                         xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="White"
              Title="Mapas">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <maps:Map 
+    WidthRequest="320" 
+    HeightRequest="200"
+    x:Name="MyMap"
+    IsShowingUser="true"
+    MapType="Street">
+        </maps:Map>
+
     </ContentPage.Content>
 </ContentPage>
