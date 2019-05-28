@@ -309,6 +309,8 @@
                 ImagePath=l.ImagePath,
                 Server=l.Server,
                 NumeroTpvs=l.NumeroTpvs,
+                Latitud=l.Latitud,
+                Longitud=l.Longitud,
             });
         }
 

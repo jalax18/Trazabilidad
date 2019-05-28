@@ -32,6 +32,8 @@ namespace Trazabilidad.Models
         public string Concentrador { get; set; }
 
         public string Gestion { get; set; }
+        public double Latitud { get; set; }
+        public double Longitud { get; set; }
 
     }
 }
