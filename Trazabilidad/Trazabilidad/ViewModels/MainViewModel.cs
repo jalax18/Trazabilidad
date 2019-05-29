@@ -199,7 +199,7 @@
             };
             Pins.Add(pin1);
 
-            var position2 = new Position(37.997018, -1.103357);
+          /*  var position2 = new Position(37.997018, -1.103357);
             var pin2 = new Pin
             {
                 Type = PinType.Place,
@@ -217,7 +217,7 @@
                 Label = "E.S. PETROPAY",
                 Address = "Direccion PetroPay"
             };
-            Pins.Add(pin3);
+            Pins.Add(pin3);*/
         }
 
 
