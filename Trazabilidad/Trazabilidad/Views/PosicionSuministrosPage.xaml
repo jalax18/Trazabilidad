@@ -29,6 +29,23 @@
                 ItemsSource="{Binding Posdef}"
                 SeparatorVisibility="None"
                 RefreshCommand="{Binding RefreshCommand}">
+                <ListView.Header>
+                    <Grid  StyleClass="listViewHeader" BackgroundColor="DarkGray" Padding="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="21*"></ColumnDefinition>
+                            <ColumnDefinition Width="79*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label   Grid.Column="0" VerticalOptions="Center"
+                                     HorizontalOptions="Start"  FontSize="13" TextColor="White"
+                                     Text="Posicion">
+                        </Label>
+                        <Label  Grid.Column="1" VerticalOptions="Center" TextColor="White"
+                                    FontSize="13"  HorizontalOptions="Start"
+                                    Text="Num. Mangueras">
+                        </Label>
+
+                    </Grid>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -39,45 +56,30 @@
                                
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="21*"/>
+                                        <ColumnDefinition Width="79*"/>
                                       
 
 
                                     </Grid.ColumnDefinitions>
                                     <Label 
                                             Grid.Column="0"
-                                            Grid.Row="0"
-                                            FontAttributes="None"
-                                            FontSize="Default" 
-                                            Text="Posicion"
-                                            TextColor="Black">
-                                    </Label>
-                                    <Label 
-                                            Grid.Column="1"
-                                            Grid.Row="0"
-                                            FontAttributes="None"
-                                            FontSize="Default" 
-                                            Text="Numero de Mangueras"
-                                            TextColor="Black">
-                                    </Label>
-                                 
-                                    <Label 
-                                            Grid.Column="0"
-                                            Grid.Row="1"
                                             FontAttributes="None"
                                             FontSize="Default" 
                                              Text="{Binding Posicion}"
-                                            TextColor="Black">
+                                            TextColor="Black"
+                                             VerticalOptions="Center"
+                                            HorizontalOptions="Start" >
                                     </Label>
 
                                     <Label 
                                             Grid.Column="1"
-                                            Grid.Row="1" 
                                             FontAttributes="None"
                                             FontSize="Default" 
                                              Text="{Binding Numman}"
-                                            TextColor="Black">
+                                            TextColor="Black"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start" >
                                     </Label>
 
 
